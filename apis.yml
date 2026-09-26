@@ -1,23 +1,123 @@
 aid: atvenu
+
 name: atVenu
-description: 'atVenu is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.prod.website-files.com/6971425127cb32a80d3a8915/6a3016250738cb3116eb4571_f05b49821ad326db4fbd8407918dec35_OpenGraph.png
+
+description: atVenu provides an all‑in‑one payment and commerce platform for live events, enabling venues, festivals, artists, and pop‑up experiences
+  to sell merchandise, food, beverage, tickets and services through a unified POS system. The solution supports mobile ordering, promotions, inventory
+  management, and integrates with existing ticketing and CRM tools, aiming to streamline revenue streams for transient event operators.
+
 url: https://raw.githubusercontent.com/api-evangelist/atvenu/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Payments
+- Live Events
+- Commerce
+- POS
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Spectral
+  url: rules/atvenu-rules.yml
+- type: JSONLD
+  url: json-ld/atvenu-context.jsonld
+- type: Vocabulary
+  url: vocabulary/atvenu-vocabulary.yml
+- type: DataModel
+  url: data-model/atvenu-data-model.yml
+- type: Conventions
+  url: conventions/atvenu-conventions.yml
+- type: Authentication
+  url: authentication/atvenu-authentication.yml
+- type: Conformance
+  url: conformance/atvenu-conformance.yml
+- type: Hosts
+  url: hosts/atvenu-hosts.yml
+- type: Vendors
+  url: vendors/atvenu-vendors.yml
+- type: TermsOfService
+  url: https://www.atvenu.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.atvenu.com/privacy-policy
+- type: Documentation
+  url: https://developer.zendesk.com/
+- type: GitHubOrganization
+  url: https://github.com/atvenu
+- type: DomainSecurity
+  url: security/atvenu-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.atvenu.com/
+- type: Blog
+  url: https://www.atvenu.com/blog
+- type: Support
+  url: https://atvenu.zendesk.com/hc/en-us
+- type: GettingStarted
+  url: https://www.atvenu.com/sign-up
+
+apis:
+- aid: atvenu:atvenu-api
+  name: atVenu API
+  description: 'atVenu API as documented publicly: 45 operations. Contract generated from the documentation by API Evangelist (2026-09-26); not
+    the provider''s own document.'
+  humanURL: https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+  baseURL: https://support.zendesk.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/atvenu-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-request-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-incremental-items-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-services-zis-registry-integration-bundles-uuid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-sunshine-objects-records-resourceid-relationships-relations-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-user-profiles-events-response-schema.json
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  method: derived
+  generated: '2026-09-26'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes developer documentation but serves no machine-readable contract from it
+  evidence:
+  - url: https://api.atvenu.com/mcp
+    status: 403
+  - url: https://api.zendesk.com/mcp
+    status: 401
+  - url: https://atvenu.zendesk.com/mcp
+    status: 401
+  - url: https://www.nasdaqprivatemarket.com/
+    status: 200
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 19
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

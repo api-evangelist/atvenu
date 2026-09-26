@@ -1,0 +1,147 @@
+generated: '2026-09-26'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 11
+  own: 5
+  other_domain: 5
+  platform: 1
+  roles:
+  - api
+  - docs
+  - other
+  - partner
+  - source
+  - support
+  - website
+hosts:
+- host: api.atvenu.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: atvenu.com
+  role: api
+  relation: own
+- host: api.zendesk.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: zendesk.com
+  role: api
+  relation: other-domain
+- host: artist.atvenu.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: atvenu.com
+  role: other
+  relation: own
+- host: atvenu.zendesk.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Support
+  serves: []
+  registrable_domain: zendesk.com
+  role: support
+  relation: other-domain
+- host: developer.zendesk.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - namespace-probe
+  - docs-index
+  - well-known
+  types:
+  - Documentation
+  serves:
+  - docs
+  title: Documentation Home | Zendesk Developer Docs
+  status: 200
+  registrable_domain: zendesk.com
+  role: docs
+  relation: other-domain
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: info.atvenu.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: atvenu.com
+  role: other
+  relation: own
+- host: partner.zendesk.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  - well-known
+  types: []
+  serves: []
+  title: Zendesk Partner Experience
+  status: 200
+  registrable_domain: zendesk.com
+  role: partner
+  relation: other-domain
+- host: security.atvenu.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: atvenu.com
+  role: other
+  relation: own
+- host: support.zendesk.com
+  found_by:
+  - apis[]
+  types: []
+  serves:
+  - api
+  registrable_domain: zendesk.com
+  role: support
+  relation: other-domain
+- host: www.atvenu.com
+  found_by:
+  - pointer
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - TermsOfService
+  - PrivacyPolicy
+  - Website
+  - Blog
+  - GettingStarted
+  serves:
+  - docs
+  - cdn
+  vendor: cloudflare
+  registrable_domain: atvenu.com
+  role: website
+  relation: own

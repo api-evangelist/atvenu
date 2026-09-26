@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/atvenu/main/json-schema/atvenu-get-api-v2-incremental-items-json-response-schema.json",
+  "title": "GetApiV2IncrementalItemsJsonResponse",
+  "x-generated": "2026-09-26",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/GetApiV2IncrementalItemsJsonResponse",
+  "type": "object",
+  "properties": {
+    "tickets": {
+      "type": "array",
+      "description": "Array of ticket objects (when items = tickets)"
+    },
+    "ticket_events": {
+      "type": "array",
+      "description": "Array of ticket event objects (when items = ticket events)"
+    },
+    "users": {
+      "type": "array",
+      "description": "Array of user objects (when items = users)"
+    },
+    "organizations": {
+      "type": "array",
+      "description": "Array of organization objects (when items = organizations)"
+    },
+    "next_page": {
+      "type": "string",
+      "description": "URL for the next page using the end_time as start_time"
+    },
+    "end_time": {
+      "type": "integer",
+      "description": "Timestamp to use as start_time for the next request"
+    },
+    "end_of_stream": {
+      "type": "boolean",
+      "description": "True when the last page of results has been reached"
+    },
+    "count": {
+      "type": "integer",
+      "description": "Number of items on the page (not reliable for pagination)"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+generated: '2026-09-26'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development/
+sources:
+- https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development/
+- https://developer.zendesk.com/documentation/ticketing/getting-started/zendesk-api-quick-start/
+- https://developer.zendesk.com/documentation/zendesk-web-widget-sdks/sdks/android/getting_started/
+- https://developer.zendesk.com/documentation/zendesk-web-widget-sdks/sdks/ios/getting_started/
+idempotency:
+  coverage: none
+  evidence: The provided pages do not describe any idempotency key header or retention window.
+pagination:
+  style: cursor pagination and offset pagination
+  evidence: The Getting a trial or sponsored account page mentions both cursor pagination and offset pagination as pagination styles.
+authentication: API password (basic authentication) is required for API access; SSO or two‑factor may also be used.
+docs: https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development/

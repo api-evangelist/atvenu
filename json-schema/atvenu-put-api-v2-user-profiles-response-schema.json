@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/atvenu/main/json-schema/atvenu-put-api-v2-user-profiles-response-schema.json",
+  "title": "PutApiV2UserProfilesResponse",
+  "x-generated": "2026-09-26",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PutApiV2UserProfilesResponse",
+  "type": "object",
+  "properties": {
+    "profile.id": {
+      "type": "string",
+      "description": "Unique identifier of the profile."
+    },
+    "profile.user_id": {
+      "type": "string",
+      "description": "Zendesk user id associated with the profile."
+    },
+    "profile.source": {
+      "type": "string"
+    },
+    "profile.type": {
+      "type": "string"
+    },
+    "profile.name": {
+      "type": "string"
+    },
+    "profile.attributes": {
+      "type": "object"
+    },
+    "profile.identifiers": {
+      "type": "array"
+    },
+    "profile.created_at": {
+      "type": "string",
+      "description": "Timestamp of creation."
+    },
+    "profile.updated_at": {
+      "type": "string",
+      "description": "Timestamp of last update."
+    }
+  }
+}

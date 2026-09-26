@@ -1,0 +1,16 @@
+generated: '2026-09-26'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://developer.zendesk.com/documentation/authentication/
+sources:
+- https://developer.zendesk.com/documentation/authentication/
+- https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development/
+- https://developer.zendesk.com/documentation/ticketing/getting-started/zendesk-api-quick-start/
+- https://developer.zendesk.com/documentation/zendesk-web-widget-sdks/sdks/android/getting_started/
+description: Authentication schemes as published on the Zendesk developer pages.
+schemes:
+- type: oauth2
+  name: OAuth
+  evidence: Learn how OAuth authentication works and choose the right flow for your integration.
+  how_to_obtain: Use an OAuth flow as described in the Zendesk documentation.
+docs: https://developer.zendesk.com/documentation/authentication/

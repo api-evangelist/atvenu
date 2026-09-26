@@ -1,0 +1,249 @@
+generated: '2026-09-26'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/atvenu-openapi-generated.yml
+vocabulary:
+  name: atVenu Domain Vocabulary
+  description: 'Terms declared by atVenu''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-09-26'
+  terms:
+  - term: GetApiIncidentsResponse
+    definition: 'Object declared by the contract with fields: degradation, impact, outage, postmortem, resolved_at, started_at, status, title.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/GetApiIncidentsResponse
+  - term: PostApiServicesZisInboundWebhooksGenericIngestTokenRequest
+    definition: 'Object declared by the contract with fields: body, subject.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PostApiServicesZisInboundWebhooksGenericIngestTokenRequest
+  - term: PostApiServicesZisInboundWebhooksGenericIngestTokenResponse
+    definition: 'Object declared by the contract with fields: 200, 401.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PostApiServicesZisInboundWebhooksGenericIngestTokenResponse
+  - term: GetApiServicesZisInboundWebhooksGenericMyIntegrationResponse
+    definition: 'Object declared by the contract with fields: event_type, id, integration, password, path, source_system, username, uuid, zendesk_account_id.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/GetApiServicesZisInboundWebhooksGenericMyIntegrationResponse
+  - term: PostApiServicesZisInboundWebhooksGenericIntegrationRequest
+    definition: 'Object declared by the contract with fields: event_type, source_system.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PostApiServicesZisInboundWebhooksGenericIntegrationRequest
+  - term: PostApiServicesZisInboundWebhooksGenericIntegrationResponse
+    definition: 'Object declared by the contract with fields: 201, 401.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PostApiServicesZisInboundWebhooksGenericIntegrationResponse
+  - term: GetApiServicesZisInboundWebhooksGenericIntegrationUuidRespon
+    definition: 'Object declared by the contract with fields: 200, 404.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/GetApiServicesZisInboundWebhooksGenericIntegrationUuidRespon
+  - term: GetApiServicesZisIntegrationsIntegrationConfigsResponse
+    definition: 'Object declared by the contract with fields: method, url, headers, params.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/GetApiServicesZisIntegrationsIntegrationConfigsResponse
+  - term: PostApiServicesZisIntegrationsIntegrationConfigsResponse
+    definition: 'Object declared by the contract with fields: config.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PostApiServicesZisIntegrationsIntegrationConfigsResponse
+  - term: GetApiServicesZisIntegrationsIntegrationConfigsConfigidRespo
+    definition: 'Object declared by the contract with fields: configs.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/GetApiServicesZisIntegrationsIntegrationConfigsConfigidRespo
+  - term: PatchApiServicesZisIntegrationsIntegrationConfigsScopeReques
+    definition: 'Object declared by the contract with fields: config.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PatchApiServicesZisIntegrationsIntegrationConfigsScopeReques
+  - term: PatchApiServicesZisIntegrationsIntegrationConfigsScopeRespon
+    definition: 'Object declared by the contract with fields: config.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PatchApiServicesZisIntegrationsIntegrationConfigsScopeRespon
+  - term: PutApiServicesZisIntegrationsIntegrationConfigsScopeRequest
+    definition: 'Object declared by the contract with fields: config.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PutApiServicesZisIntegrationsIntegrationConfigsScopeRequest
+  - term: PutApiServicesZisIntegrationsIntegrationConfigsScopeResponse
+    definition: 'Object declared by the contract with fields: config.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PutApiServicesZisIntegrationsIntegrationConfigsScopeResponse
+  - term: GetApiServicesZisIntegrationsIntegrationConnectionsAllRespon
+    definition: 'Object declared by the contract with fields: api_key, basic_auth, bearer_token, meta, oauth.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/GetApiServicesZisIntegrationsIntegrationConnectionsAllRespon
+  - term: DeleteApiServicesZisLinksIntegrationResponse
+    definition: 'Object declared by the contract with fields: method, url, headers, params.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/DeleteApiServicesZisLinksIntegrationResponse
+  - term: GetApiServicesZisLinksIntegrationResponse
+    definition: 'Object declared by the contract with fields: method, url, headers, params.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/GetApiServicesZisLinksIntegrationResponse
+  - term: PatchApiServicesZisLinksIntegrationRequest
+    definition: 'Object declared by the contract with fields: left_object, right_object, link_type.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PatchApiServicesZisLinksIntegrationRequest
+  - term: PatchApiServicesZisLinksIntegrationResponse
+    definition: 'Object declared by the contract with fields: link.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PatchApiServicesZisLinksIntegrationResponse
+  - term: PostApiServicesZisLinksIntegrationRequest
+    definition: 'Object declared by the contract with fields: left_object, right_object, link_type.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PostApiServicesZisLinksIntegrationRequest
+  - term: PostApiServicesZisLinksIntegrationResponse
+    definition: 'Object declared by the contract with fields: link.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PostApiServicesZisLinksIntegrationResponse
+  - term: GetApiServicesZisRegistryIntegrationBundlesResponse
+    definition: 'Object declared by the contract with fields: bundles, meta.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/GetApiServicesZisRegistryIntegrationBundlesResponse
+  - term: PostApiServicesZisRegistryIntegrationBundlesRequest
+    definition: 'Object declared by the contract with fields: description, name, resources, zis_template_version.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PostApiServicesZisRegistryIntegrationBundlesRequest
+  - term: GetApiServicesZisRegistryIntegrationBundlesUuidResponse
+    definition: 'Object declared by the contract with fields: description, integration, name, resources, uuid, zendesk_account_id, zis_template_version.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/GetApiServicesZisRegistryIntegrationBundlesUuidResponse
+  - term: GetApiSunshineObjectsRecordsResourceidRelationshipsRelations
+    definition: 'Object declared by the contract with fields: data, data[].id, data[].target, data[].ref, links.previous, links.next.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/GetApiSunshineObjectsRecordsResourceidRelationshipsRelations
+  - term: PostApiSunshineObjectsObjectidRequest
+    definition: 'Object declared by the contract with fields: data.type, data.attributes.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PostApiSunshineObjectsObjectidRequest
+  - term: PostApiSunshineObjectsObjectidResponse
+    definition: 'Object declared by the contract with fields: data.type, data.id.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PostApiSunshineObjectsObjectidResponse
+  - term: PostApiSunshineSunshineidRecordsRequest
+    definition: 'Object declared by the contract with fields: data.relationship_type, data.source, data.target.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PostApiSunshineSunshineidRecordsRequest
+  - term: PostApiSunshineSunshineidRecordsResponse
+    definition: 'Object declared by the contract with fields: data.id, data.relationship_record_type, data.source, data.target, data.created_at.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PostApiSunshineSunshineidRecordsResponse
+  - term: PostApiSunshineSunshineidTypesRequest
+    definition: 'Object declared by the contract with fields: data.key, data.schema.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PostApiSunshineSunshineidTypesRequest
+  - term: PostApiSunshineSunshineidTypesResponse
+    definition: 'Object declared by the contract with fields: data.key, data.schema, data.created_at, data.updated_at.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PostApiSunshineSunshineidTypesResponse
+  - term: GetApiV2HelpCenterSectionsSectionidArticlesJsonResponse
+    definition: 'Object declared by the contract with fields: next_page.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/GetApiV2HelpCenterSectionsSectionidArticlesJsonResponse
+  - term: GetApiV2IncrementalItemsJsonResponse
+    definition: 'Object declared by the contract with fields: tickets, ticket_events, users, organizations, next_page, end_time, end_of_stream,
+      count.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/GetApiV2IncrementalItemsJsonResponse
+  - term: GetApiV2Tickets3JsonResponse
+    definition: 'Object declared by the contract with fields: ticket.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/GetApiV2Tickets3JsonResponse
+  - term: PatchApiV2UserProfilesRequest
+    definition: 'Object declared by the contract with fields: profile, profile.identifiers, profile.identifiers[].type, profile.identifiers[].value.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PatchApiV2UserProfilesRequest
+  - term: PatchApiV2UserProfilesResponse
+    definition: 'Object declared by the contract with fields: profile.id, profile.user_id, profile.source, profile.type, profile.name, profile.attributes,
+      profile.identifiers, profile.created_at, profile.updated_at.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PatchApiV2UserProfilesResponse
+  - term: PutApiV2UserProfilesRequest
+    definition: 'Object declared by the contract with fields: profile, profile.source, profile.type, profile.identifiers, profile.identifiers[].type,
+      profile.identifiers[].value, profile.attributes.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PutApiV2UserProfilesRequest
+  - term: PutApiV2UserProfilesResponse
+    definition: 'Object declared by the contract with fields: profile.id, profile.user_id, profile.source, profile.type, profile.name, profile.attributes,
+      profile.identifiers, profile.created_at, profile.updated_at.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PutApiV2UserProfilesResponse
+  - term: GetApiV2UserProfilesEventsResponse
+    definition: 'Object declared by the contract with fields: events, links.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/GetApiV2UserProfilesEventsResponse
+  - term: PostApiV2UserProfilesEventsRequest
+    definition: 'Object declared by the contract with fields: profile, event.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PostApiV2UserProfilesEventsRequest
+  - term: PostApiV2UserProfilesEventsResponse
+    definition: 'Object declared by the contract with fields: status.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PostApiV2UserProfilesEventsResponse
+  - term: GetApiV2UserProfilesProfileidEventsResponse
+    definition: 'Object declared by the contract with fields: events.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/GetApiV2UserProfilesProfileidEventsResponse
+  - term: PostApiV2UsersCreateManyJsonRequest
+    definition: 'Object declared by the contract with fields: users.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PostApiV2UsersCreateManyJsonRequest
+  - term: GetApiV2UsersUseridResponse
+    definition: 'Object declared by the contract with fields: tickets.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/GetApiV2UsersUseridResponse
+  - term: PostApiV2UsersUseridEventsRequest
+    definition: 'Object declared by the contract with fields: profile, event.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PostApiV2UsersUseridEventsRequest
+  - term: PostApiV2UsersUseridEventsResponse
+    definition: 'Object declared by the contract with fields: status.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/PostApiV2UsersUseridEventsResponse
+  - term: GetApiV2V2IdResponse
+    definition: 'Object declared by the contract with fields: groups.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/atvenu-openapi-generated.yml#/components/schemas/GetApiV2V2IdResponse

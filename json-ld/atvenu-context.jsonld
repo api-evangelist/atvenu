@@ -1,0 +1,353 @@
+{
+  "@context": {
+    "@vocab": "https://atvenu.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "atvenu": "https://atvenu.com/schema#",
+    "GetApiIncidentsResponse": "atvenu:GetApiIncidentsResponse",
+    "degradation": {
+      "@id": "atvenu:degradation",
+      "@type": "xsd:boolean"
+    },
+    "impact": {
+      "@id": "atvenu:impact",
+      "@type": "xsd:string"
+    },
+    "outage": {
+      "@id": "atvenu:outage",
+      "@type": "xsd:boolean"
+    },
+    "postmortem": {
+      "@id": "atvenu:postmortem",
+      "@type": "xsd:string"
+    },
+    "resolved_at": {
+      "@id": "atvenu:resolved_at",
+      "@type": "xsd:string"
+    },
+    "started_at": {
+      "@id": "atvenu:started_at",
+      "@type": "xsd:dateTime"
+    },
+    "status": {
+      "@id": "atvenu:status",
+      "@type": "xsd:string"
+    },
+    "title": {
+      "@id": "atvenu:title",
+      "@type": "xsd:string"
+    },
+    "PostApiServicesZisInboundWebhooksGenericIngestTokenRequest": "atvenu:PostApiServicesZisInboundWebhooksGenericIngestTokenRequest",
+    "body": {
+      "@id": "atvenu:body",
+      "@type": "xsd:string"
+    },
+    "subject": {
+      "@id": "atvenu:subject",
+      "@type": "xsd:string"
+    },
+    "PostApiServicesZisInboundWebhooksGenericIngestTokenResponse": "atvenu:PostApiServicesZisInboundWebhooksGenericIngestTokenResponse",
+    "GetApiServicesZisInboundWebhooksGenericMyIntegrationResponse": "atvenu:GetApiServicesZisInboundWebhooksGenericMyIntegrationResponse",
+    "event_type": {
+      "@id": "atvenu:event_type",
+      "@type": "xsd:string"
+    },
+    "id": {
+      "@id": "atvenu:id",
+      "@type": "xsd:string"
+    },
+    "integration": {
+      "@id": "atvenu:integration",
+      "@type": "xsd:string"
+    },
+    "password": {
+      "@id": "atvenu:password",
+      "@type": "xsd:string"
+    },
+    "path": {
+      "@id": "atvenu:path",
+      "@type": "xsd:string"
+    },
+    "source_system": {
+      "@id": "atvenu:source_system",
+      "@type": "xsd:string"
+    },
+    "username": {
+      "@id": "atvenu:username",
+      "@type": "xsd:string"
+    },
+    "uuid": {
+      "@id": "atvenu:uuid",
+      "@type": "xsd:string"
+    },
+    "zendesk_account_id": {
+      "@id": "atvenu:zendesk_account_id",
+      "@type": "xsd:integer"
+    },
+    "PostApiServicesZisInboundWebhooksGenericIntegrationRequest": "atvenu:PostApiServicesZisInboundWebhooksGenericIntegrationRequest",
+    "PostApiServicesZisInboundWebhooksGenericIntegrationResponse": "atvenu:PostApiServicesZisInboundWebhooksGenericIntegrationResponse",
+    "GetApiServicesZisInboundWebhooksGenericIntegrationUuidRespon": "atvenu:GetApiServicesZisInboundWebhooksGenericIntegrationUuidRespon",
+    "GetApiServicesZisIntegrationsIntegrationConfigsResponse": "atvenu:GetApiServicesZisIntegrationsIntegrationConfigsResponse",
+    "method": {
+      "@id": "atvenu:method",
+      "@type": "xsd:string"
+    },
+    "url": {
+      "@id": "atvenu:url",
+      "@type": "xsd:string"
+    },
+    "headers": {
+      "@id": "atvenu:headers"
+    },
+    "params": {
+      "@id": "atvenu:params"
+    },
+    "PostApiServicesZisIntegrationsIntegrationConfigsResponse": "atvenu:PostApiServicesZisIntegrationsIntegrationConfigsResponse",
+    "config": {
+      "@id": "atvenu:config"
+    },
+    "GetApiServicesZisIntegrationsIntegrationConfigsConfigidRespo": "atvenu:GetApiServicesZisIntegrationsIntegrationConfigsConfigidRespo",
+    "configs": {
+      "@id": "atvenu:configs",
+      "@container": "@list"
+    },
+    "PatchApiServicesZisIntegrationsIntegrationConfigsScopeReques": "atvenu:PatchApiServicesZisIntegrationsIntegrationConfigsScopeReques",
+    "PatchApiServicesZisIntegrationsIntegrationConfigsScopeRespon": "atvenu:PatchApiServicesZisIntegrationsIntegrationConfigsScopeRespon",
+    "PutApiServicesZisIntegrationsIntegrationConfigsScopeRequest": "atvenu:PutApiServicesZisIntegrationsIntegrationConfigsScopeRequest",
+    "PutApiServicesZisIntegrationsIntegrationConfigsScopeResponse": "atvenu:PutApiServicesZisIntegrationsIntegrationConfigsScopeResponse",
+    "GetApiServicesZisIntegrationsIntegrationConnectionsAllRespon": "atvenu:GetApiServicesZisIntegrationsIntegrationConnectionsAllRespon",
+    "api_key": {
+      "@id": "atvenu:api_key",
+      "@container": "@list"
+    },
+    "basic_auth": {
+      "@id": "atvenu:basic_auth",
+      "@container": "@list"
+    },
+    "bearer_token": {
+      "@id": "atvenu:bearer_token",
+      "@container": "@list"
+    },
+    "meta": {
+      "@id": "atvenu:meta"
+    },
+    "oauth": {
+      "@id": "atvenu:oauth",
+      "@container": "@list"
+    },
+    "DeleteApiServicesZisLinksIntegrationResponse": "atvenu:DeleteApiServicesZisLinksIntegrationResponse",
+    "GetApiServicesZisLinksIntegrationResponse": "atvenu:GetApiServicesZisLinksIntegrationResponse",
+    "PatchApiServicesZisLinksIntegrationRequest": "atvenu:PatchApiServicesZisLinksIntegrationRequest",
+    "left_object": {
+      "@id": "atvenu:left_object"
+    },
+    "right_object": {
+      "@id": "atvenu:right_object"
+    },
+    "link_type": {
+      "@id": "atvenu:link_type",
+      "@type": "xsd:string"
+    },
+    "PatchApiServicesZisLinksIntegrationResponse": "atvenu:PatchApiServicesZisLinksIntegrationResponse",
+    "link": {
+      "@id": "atvenu:link"
+    },
+    "PostApiServicesZisLinksIntegrationRequest": "atvenu:PostApiServicesZisLinksIntegrationRequest",
+    "PostApiServicesZisLinksIntegrationResponse": "atvenu:PostApiServicesZisLinksIntegrationResponse",
+    "GetApiServicesZisRegistryIntegrationBundlesResponse": "atvenu:GetApiServicesZisRegistryIntegrationBundlesResponse",
+    "bundles": {
+      "@id": "atvenu:bundles",
+      "@container": "@list"
+    },
+    "PostApiServicesZisRegistryIntegrationBundlesRequest": "atvenu:PostApiServicesZisRegistryIntegrationBundlesRequest",
+    "description": {
+      "@id": "atvenu:description",
+      "@type": "xsd:string"
+    },
+    "name": {
+      "@id": "atvenu:name",
+      "@type": "xsd:string"
+    },
+    "resources": {
+      "@id": "atvenu:resources"
+    },
+    "zis_template_version": {
+      "@id": "atvenu:zis_template_version",
+      "@type": "xsd:string"
+    },
+    "GetApiServicesZisRegistryIntegrationBundlesUuidResponse": "atvenu:GetApiServicesZisRegistryIntegrationBundlesUuidResponse",
+    "GetApiSunshineObjectsRecordsResourceidRelationshipsRelations": "atvenu:GetApiSunshineObjectsRecordsResourceidRelationshipsRelations",
+    "data": {
+      "@id": "atvenu:data",
+      "@container": "@list"
+    },
+    "links.previous": {
+      "@id": "atvenu:links.previous",
+      "@type": "xsd:string"
+    },
+    "links.next": {
+      "@id": "atvenu:links.next",
+      "@type": "xsd:string"
+    },
+    "PostApiSunshineObjectsObjectidRequest": "atvenu:PostApiSunshineObjectsObjectidRequest",
+    "data.type": {
+      "@id": "atvenu:data.type",
+      "@type": "xsd:string"
+    },
+    "data.attributes": {
+      "@id": "atvenu:data.attributes"
+    },
+    "PostApiSunshineObjectsObjectidResponse": "atvenu:PostApiSunshineObjectsObjectidResponse",
+    "data.id": {
+      "@id": "atvenu:data.id",
+      "@type": "xsd:string"
+    },
+    "PostApiSunshineSunshineidRecordsRequest": "atvenu:PostApiSunshineSunshineidRecordsRequest",
+    "data.relationship_type": {
+      "@id": "atvenu:data.relationship_type",
+      "@type": "xsd:string"
+    },
+    "data.source": {
+      "@id": "atvenu:data.source",
+      "@type": "xsd:string"
+    },
+    "data.target": {
+      "@id": "atvenu:data.target",
+      "@type": "xsd:string"
+    },
+    "PostApiSunshineSunshineidRecordsResponse": "atvenu:PostApiSunshineSunshineidRecordsResponse",
+    "data.relationship_record_type": {
+      "@id": "atvenu:data.relationship_record_type",
+      "@type": "xsd:string"
+    },
+    "data.created_at": {
+      "@id": "atvenu:data.created_at",
+      "@type": "xsd:string"
+    },
+    "PostApiSunshineSunshineidTypesRequest": "atvenu:PostApiSunshineSunshineidTypesRequest",
+    "data.key": {
+      "@id": "atvenu:data.key",
+      "@type": "xsd:string"
+    },
+    "data.schema": {
+      "@id": "atvenu:data.schema"
+    },
+    "PostApiSunshineSunshineidTypesResponse": "atvenu:PostApiSunshineSunshineidTypesResponse",
+    "data.updated_at": {
+      "@id": "atvenu:data.updated_at",
+      "@type": "xsd:string"
+    },
+    "GetApiV2HelpCenterSectionsSectionidArticlesJsonResponse": "atvenu:GetApiV2HelpCenterSectionsSectionidArticlesJsonResponse",
+    "next_page": {
+      "@id": "atvenu:next_page",
+      "@type": "xsd:string"
+    },
+    "GetApiV2IncrementalItemsJsonResponse": "atvenu:GetApiV2IncrementalItemsJsonResponse",
+    "tickets": {
+      "@id": "atvenu:tickets",
+      "@container": "@list"
+    },
+    "ticket_events": {
+      "@id": "atvenu:ticket_events",
+      "@container": "@list"
+    },
+    "users": {
+      "@id": "atvenu:users",
+      "@container": "@list"
+    },
+    "organizations": {
+      "@id": "atvenu:organizations",
+      "@container": "@list"
+    },
+    "end_time": {
+      "@id": "atvenu:end_time",
+      "@type": "xsd:integer"
+    },
+    "end_of_stream": {
+      "@id": "atvenu:end_of_stream",
+      "@type": "xsd:boolean"
+    },
+    "count": {
+      "@id": "atvenu:count",
+      "@type": "xsd:integer"
+    },
+    "GetApiV2Tickets3JsonResponse": "atvenu:GetApiV2Tickets3JsonResponse",
+    "ticket": {
+      "@id": "atvenu:ticket"
+    },
+    "PatchApiV2UserProfilesRequest": "atvenu:PatchApiV2UserProfilesRequest",
+    "profile": {
+      "@id": "atvenu:profile"
+    },
+    "profile.identifiers": {
+      "@id": "atvenu:profile.identifiers",
+      "@container": "@list"
+    },
+    "PatchApiV2UserProfilesResponse": "atvenu:PatchApiV2UserProfilesResponse",
+    "profile.id": {
+      "@id": "atvenu:profile.id",
+      "@type": "xsd:string"
+    },
+    "profile.user_id": {
+      "@id": "atvenu:profile.user_id",
+      "@type": "xsd:string"
+    },
+    "profile.source": {
+      "@id": "atvenu:profile.source",
+      "@type": "xsd:string"
+    },
+    "profile.type": {
+      "@id": "atvenu:profile.type",
+      "@type": "xsd:string"
+    },
+    "profile.name": {
+      "@id": "atvenu:profile.name",
+      "@type": "xsd:string"
+    },
+    "profile.attributes": {
+      "@id": "atvenu:profile.attributes"
+    },
+    "profile.created_at": {
+      "@id": "atvenu:profile.created_at",
+      "@type": "xsd:string"
+    },
+    "profile.updated_at": {
+      "@id": "atvenu:profile.updated_at",
+      "@type": "xsd:string"
+    },
+    "PutApiV2UserProfilesRequest": "atvenu:PutApiV2UserProfilesRequest",
+    "PutApiV2UserProfilesResponse": "atvenu:PutApiV2UserProfilesResponse",
+    "GetApiV2UserProfilesEventsResponse": "atvenu:GetApiV2UserProfilesEventsResponse",
+    "events": {
+      "@id": "atvenu:events",
+      "@container": "@list"
+    },
+    "links": {
+      "@id": "atvenu:links",
+      "@container": "@list"
+    },
+    "PostApiV2UserProfilesEventsRequest": "atvenu:PostApiV2UserProfilesEventsRequest",
+    "event": {
+      "@id": "atvenu:event"
+    },
+    "PostApiV2UserProfilesEventsResponse": "atvenu:PostApiV2UserProfilesEventsResponse",
+    "GetApiV2UserProfilesProfileidEventsResponse": "atvenu:GetApiV2UserProfilesProfileidEventsResponse",
+    "PostApiV2UsersCreateManyJsonRequest": "atvenu:PostApiV2UsersCreateManyJsonRequest",
+    "GetApiV2UsersUseridResponse": "atvenu:GetApiV2UsersUseridResponse",
+    "PostApiV2UsersUseridEventsRequest": "atvenu:PostApiV2UsersUseridEventsRequest",
+    "PostApiV2UsersUseridEventsResponse": "atvenu:PostApiV2UsersUseridEventsResponse",
+    "GetApiV2V2IdResponse": "atvenu:GetApiV2V2IdResponse",
+    "groups": {
+      "@id": "atvenu:groups",
+      "@container": "@list"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "atVenu API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects atVenu's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-09-26) from openapi/_ae-authored/atvenu-openapi-generated.yml.",
+  "dcterms:created": "2026-09-26",
+  "dcterms:source": [
+    "openapi/_ae-authored/atvenu-openapi-generated.yml"
+  ]
+}
