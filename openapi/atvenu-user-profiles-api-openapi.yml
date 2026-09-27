@@ -1,0 +1,341 @@
+openapi: 3.2.0
+info:
+  title: atVenu User Profiles API
+  version: '2026-09-26'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-26: 45 operation(s) read from 31 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; atVenu has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 43
+    documentation: 2
+    pages-with-code: 29
+    pages-read: 31
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-26'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+  - https://developer.zendesk.com/documentation/ticketing/events/getting-started-with-events
+  - https://developer.zendesk.com/documentation/ticketing/profiles/getting-started-with-profiles
+  - https://developer.zendesk.com/documentation/custom-data/custom-objects/getting-started-with-custom-objects
+  - https://developer.zendesk.com/documentation/developer-tools/getting-started/getting-a-trial-or-sponsored-account-for-development
+  - https://developer.zendesk.com/api-reference/ticketing/introduction
+  - https://developer.zendesk.com/api-reference/status_api/status_api
+  - https://developer.zendesk.com/api-reference/live-chat/chat-conversations-api/conversations-api
+  - https://developer.zendesk.com/api-reference/integration-services/configs/configs
+  - https://developer.zendesk.com/api-reference/integration-services/connections/all_connections
+  - https://developer.zendesk.com/api-reference/integration-services/inbound-webhooks/inbound_webhooks
+  - https://developer.zendesk.com/api-reference/integration-services/links/links
+  - https://developer.zendesk.com/api-reference/integration-services/registry/bundles
+  - https://developer.zendesk.com/documentation/webhooks/creating-and-monitoring-webhooks
+  - https://developer.zendesk.com/documentation/event-connectors/webhooks/creating-and-monitoring-webhooks
+  - https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development
+  - https://developer.zendesk.com/documentation/api-basics/getting-started/installing-and-using-curl
+  - https://developer.zendesk.com/documentation/api-basics/getting-started/exploring-zendesk-apis-with-postman
+  - https://developer.zendesk.com/documentation/api-basics/best-practices/best-practices-for-avoiding-rate-limiting
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/working-with-json
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/searching-with-the-zendesk-api
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/side_loading
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/using-the-incremental-export-api
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/exporting-users
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/importing-users-with-the-zendesk-api
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/exporting-access-logs
+  - https://developer.zendesk.com/documentation/api-basics/pagination/paginating-through-lists-using-cursor-pagination
+  - https://developer.zendesk.com/documentation/api-basics/pagination/paginating-through-lists-using-offset-pagination
+  - https://developer.zendesk.com/documentation/api-basics/pagination/paginating-through-lists
+  - https://developer.zendesk.com/documentation/api-basics/pagination/understanding-the-limitations-of-offset-pagination
+  - https://developer.zendesk.com/documentation/api-basics/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+servers:
+- url: https://support.zendesk.com
+security:
+- bearer: []
+tags:
+- name: User Profiles
+paths:
+  /api/v2/user_profiles:
+    patch:
+      operationId: patch_api_v2_user_profiles
+      tags:
+      - User Profiles
+      summary: Update a profile
+      x-source: https://developer.zendesk.com/documentation/ticketing/profiles/getting-started-with-profiles
+      parameters:
+      - name: identifier
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Identifier query used to select the profile to update, e.g. acme:customer:email:[email protected]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchApiV2UserProfilesRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchApiV2UserProfilesResponse'
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_api_v2_user_profiles
+      tags:
+      - User Profiles
+      summary: Create a profile
+      x-source: https://developer.zendesk.com/documentation/ticketing/profiles/getting-started-with-profiles
+      parameters:
+      - name: identifier
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Identifier query that defines the source and type of the profile and prevents duplicate data, e.g. acme:customer:email:[email protected]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutApiV2UserProfilesRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutApiV2UserProfilesResponse'
+      x-evidence:
+        kind: documentation
+  /api/v2/user_profiles/events:
+    get:
+      operationId: get_api_v2_user_profiles_events
+      tags:
+      - User Profiles
+      summary: GET /api/v2/user_profiles/events
+      x-source: https://developer.zendesk.com/documentation/ticketing/events/getting-started-with-events
+      parameters:
+      - name: identifier
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV2UserProfilesEventsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl \"https://{subdomain}.zendesk.com/api/v2/user_profiles/events?identifier=acme:customer:email: [email protected] \" \\ - H \"Authorization: Bearer {access_token}\" \n Make sure to replace the placeholder values with your own. Also make sure to enclose the URL in quotes. \n Example response \n Status : 200 OK \n { \"events\" : [ { \"id\" : \"5c42123e98326c0001b0b25c\" , \"type\" : \"2fa_enabled\" , \"source\" : \"ac"
+    post:
+      operationId: post_api_v2_user_profiles_events
+      tags:
+      - User Profiles
+      summary: Create an event
+      description: You create an event by posting information about the event and the person who triggered it to the following API endpoint.
+      x-source: https://developer.zendesk.com/documentation/ticketing/events/getting-started-with-events
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV2UserProfilesEventsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiV2UserProfilesEventsResponse'
+      x-evidence:
+        kind: documentation
+  /api/v2/user_profiles/{profileId}/events:
+    get:
+      operationId: get_api_v2_user_profiles_profileId_events
+      tags:
+      - User Profiles
+      summary: Get a profile’s events
+      x-source: https://developer.zendesk.com/documentation/ticketing/profiles/getting-started-with-profiles
+      parameters:
+      - name: profileId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV2UserProfilesProfileidEventsResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PatchApiV2UserProfilesRequest:
+      type: object
+      properties:
+        profile:
+          type: object
+          description: Partial profile object with fields to be updated.
+        profile.identifiers:
+          type: array
+          description: Array of identifier objects to add.
+        profile.identifiers[].type:
+          type: string
+          description: Identifier type, e.g. "office_phone".
+        profile.identifiers[].value:
+          type: string
+          description: Identifier value.
+      required:
+      - profile
+      - profile.identifiers
+      - profile.identifiers[].type
+      - profile.identifiers[].value
+    PostApiV2UserProfilesEventsRequest:
+      type: object
+      properties:
+        profile:
+          type: object
+          description: Profile that associates the person with a Zendesk user
+        event:
+          type: object
+          description: Event data to be recorded
+      required:
+      - profile
+      - event
+    PatchApiV2UserProfilesResponse:
+      type: object
+      properties:
+        profile.id:
+          type: string
+        profile.user_id:
+          type: string
+        profile.source:
+          type: string
+        profile.type:
+          type: string
+        profile.name:
+          type: string
+        profile.attributes:
+          type: object
+        profile.identifiers:
+          type: array
+        profile.created_at:
+          type: string
+        profile.updated_at:
+          type: string
+    PostApiV2UserProfilesEventsResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Indicates the event was received
+    PutApiV2UserProfilesResponse:
+      type: object
+      properties:
+        profile.id:
+          type: string
+          description: Unique identifier of the profile.
+        profile.user_id:
+          type: string
+          description: Zendesk user id associated with the profile.
+        profile.source:
+          type: string
+        profile.type:
+          type: string
+        profile.name:
+          type: string
+        profile.attributes:
+          type: object
+        profile.identifiers:
+          type: array
+        profile.created_at:
+          type: string
+          description: Timestamp of creation.
+        profile.updated_at:
+          type: string
+          description: Timestamp of last update.
+    GetApiV2UserProfilesProfileidEventsResponse:
+      type: object
+      properties:
+        events:
+          type: array
+          description: List of event objects associated with the profile.
+    GetApiV2UserProfilesEventsResponse:
+      type: object
+      properties:
+        events:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              type:
+                type: string
+              source:
+                type: string
+              description:
+                type: string
+              created_at:
+                type: string
+                format: date-time
+              received_at:
+                type: string
+                format: date-time
+              properties:
+                type: object
+                properties:
+                  passcode_preference:
+                    type: string
+        links:
+          type: array
+          items:
+            type: object
+            properties:
+              next:
+                type: string
+    PutApiV2UserProfilesRequest:
+      type: object
+      properties:
+        profile:
+          type: object
+          description: Profile object containing source, type, identifiers and optional attributes.
+        profile.source:
+          type: string
+          description: Source of the profile, e.g. "acme".
+        profile.type:
+          type: string
+          description: Type of the profile, e.g. "customer".
+        profile.identifiers:
+          type: array
+          description: Array of identifier objects.
+        profile.identifiers[].type:
+          type: string
+          description: Identifier type such as "email" or "phone_number".
+        profile.identifiers[].value:
+          type: string
+          description: Identifier value.
+        profile.attributes:
+          type: object
+          description: Optional key‑value pairs with additional attributes.
+      required:
+      - profile
+      - profile.source
+      - profile.type
+      - profile.identifiers
+      - profile.identifiers[].type
+      - profile.identifiers[].value
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

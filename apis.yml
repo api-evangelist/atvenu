@@ -75,16 +75,17 @@ common:
   url: https://www.atvenu.com/sign-up
 
 apis:
-- aid: atvenu:atvenu-api
-  name: atVenu API
-  description: 'atVenu API as documented publicly: 45 operations. Contract generated from the documentation by API Evangelist (2026-09-26); not
-    the provider''s own document.'
-  humanURL: https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+- aid: atvenu:atvenu-atvenu-api-api
+  name: atVenu AtVenu API
+  description: The AtVenu API API from atVenu — 2 operation(s) for atvenu api.
+  humanURL: >-
+    https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
   baseURL: https://support.zendesk.com
+  tags:
+  - AtVenu API
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/atvenu-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/atvenu-atvenu-api-api-openapi.yml
   - type: JSONSchema
     url: json-schema/atvenu-put-api-v2-user-profiles-request-schema.json
   - type: JSONSchema
@@ -92,12 +93,363 @@ apis:
   - type: JSONSchema
     url: json-schema/atvenu-put-api-v2-user-profiles-response-schema.json
   - type: JSONSchema
-    url: json-schema/atvenu-get-api-services-zis-registry-integration-bundles-uuid-response-schema.json
+    url: >-
+      json-schema/atvenu-get-api-services-zis-registry-integration-bundles-uuid-response-schema.json
   - type: JSONSchema
-    url: json-schema/atvenu-get-api-sunshine-objects-records-resourceid-relationships-relations-schema.json
+    url: >-
+      json-schema/atvenu-get-api-sunshine-objects-records-resourceid-relationships-relations-schema.json
   - type: JSONSchema
     url: json-schema/atvenu-get-api-v2-user-profiles-events-response-schema.json
-
+- aid: atvenu:atvenu-download-api
+  name: atVenu Download API
+  description: The Download API from atVenu — 2 operation(s) for download.
+  humanURL: >-
+    https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+  baseURL: https://support.zendesk.com
+  tags:
+  - Download
+  properties:
+  - type: OpenAPI
+    url: openapi/atvenu-download-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-request-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-incremental-items-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-services-zis-registry-integration-bundles-uuid-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-sunshine-objects-records-resourceid-relationships-relations-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-user-profiles-events-response-schema.json
+- aid: atvenu:atvenu-downloads-api
+  name: atVenu Downloads API
+  description: The Downloads API from atVenu — 1 operation(s) for downloads.
+  humanURL: >-
+    https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+  baseURL: https://support.zendesk.com
+  tags:
+  - Downloads
+  properties:
+  - type: OpenAPI
+    url: openapi/atvenu-downloads-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-request-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-incremental-items-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-services-zis-registry-integration-bundles-uuid-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-sunshine-objects-records-resourceid-relationships-relations-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-user-profiles-events-response-schema.json
+- aid: atvenu:atvenu-help-center-api
+  name: atVenu Help Center API
+  description: The Help Center API from atVenu — 1 operation(s) for help center.
+  humanURL: >-
+    https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+  baseURL: https://support.zendesk.com
+  tags:
+  - Help Center
+  properties:
+  - type: OpenAPI
+    url: openapi/atvenu-help-center-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-request-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-incremental-items-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-services-zis-registry-integration-bundles-uuid-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-sunshine-objects-records-resourceid-relationships-relations-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-user-profiles-events-response-schema.json
+- aid: atvenu:atvenu-incidents-api
+  name: atVenu Incidents API
+  description: The Incidents API from atVenu — 1 operation(s) for incidents.
+  humanURL: >-
+    https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+  baseURL: https://support.zendesk.com
+  tags:
+  - Incidents
+  properties:
+  - type: OpenAPI
+    url: openapi/atvenu-incidents-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-request-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-incremental-items-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-services-zis-registry-integration-bundles-uuid-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-sunshine-objects-records-resourceid-relationships-relations-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-user-profiles-events-response-schema.json
+- aid: atvenu:atvenu-incremental-api
+  name: atVenu Incremental API
+  description: The Incremental API from atVenu — 2 operation(s) for incremental.
+  humanURL: >-
+    https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+  baseURL: https://support.zendesk.com
+  tags:
+  - Incremental
+  properties:
+  - type: OpenAPI
+    url: openapi/atvenu-incremental-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-request-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-incremental-items-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-services-zis-registry-integration-bundles-uuid-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-sunshine-objects-records-resourceid-relationships-relations-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-user-profiles-events-response-schema.json
+- aid: atvenu:atvenu-register-api
+  name: atVenu Register API
+  description: The Register API from atVenu — 1 operation(s) for register.
+  humanURL: >-
+    https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+  baseURL: https://support.zendesk.com
+  tags:
+  - Register
+  properties:
+  - type: OpenAPI
+    url: openapi/atvenu-register-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-request-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-incremental-items-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-services-zis-registry-integration-bundles-uuid-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-sunshine-objects-records-resourceid-relationships-relations-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-user-profiles-events-response-schema.json
+- aid: atvenu:atvenu-services-api
+  name: atVenu Services API
+  description: The Services API from atVenu — 11 operation(s) for services.
+  humanURL: >-
+    https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+  baseURL: https://support.zendesk.com
+  tags:
+  - Services
+  properties:
+  - type: OpenAPI
+    url: openapi/atvenu-services-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-request-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-incremental-items-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-services-zis-registry-integration-bundles-uuid-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-sunshine-objects-records-resourceid-relationships-relations-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-user-profiles-events-response-schema.json
+- aid: atvenu:atvenu-sunshine-api
+  name: atVenu Sunshine API
+  description: The Sunshine API from atVenu — 4 operation(s) for sunshine.
+  humanURL: >-
+    https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+  baseURL: https://support.zendesk.com
+  tags:
+  - Sunshine
+  properties:
+  - type: OpenAPI
+    url: openapi/atvenu-sunshine-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-request-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-incremental-items-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-services-zis-registry-integration-bundles-uuid-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-sunshine-objects-records-resourceid-relationships-relations-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-user-profiles-events-response-schema.json
+- aid: atvenu:atvenu-tickets-api
+  name: atVenu Tickets API
+  description: The Tickets API from atVenu — 1 operation(s) for tickets.
+  humanURL: >-
+    https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+  baseURL: https://support.zendesk.com
+  tags:
+  - Tickets
+  properties:
+  - type: OpenAPI
+    url: openapi/atvenu-tickets-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-request-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-incremental-items-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-services-zis-registry-integration-bundles-uuid-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-sunshine-objects-records-resourceid-relationships-relations-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-user-profiles-events-response-schema.json
+- aid: atvenu:atvenu-user-profiles-api
+  name: atVenu User Profiles API
+  description: The User Profiles API from atVenu — 3 operation(s) for user profiles.
+  humanURL: >-
+    https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+  baseURL: https://support.zendesk.com
+  tags:
+  - User Profiles
+  properties:
+  - type: OpenAPI
+    url: openapi/atvenu-user-profiles-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-request-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-incremental-items-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-services-zis-registry-integration-bundles-uuid-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-sunshine-objects-records-resourceid-relationships-relations-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-user-profiles-events-response-schema.json
+- aid: atvenu:atvenu-users-api
+  name: atVenu Users API
+  description: The Users API from atVenu — 3 operation(s) for users.
+  humanURL: >-
+    https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+  baseURL: https://support.zendesk.com
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/atvenu-users-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-request-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-incremental-items-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-services-zis-registry-integration-bundles-uuid-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-sunshine-objects-records-resourceid-relationships-relations-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-user-profiles-events-response-schema.json
+- aid: atvenu:atvenu-webhooks-api
+  name: atVenu Webhooks API
+  description: The Webhooks API from atVenu — 1 operation(s) for webhooks.
+  humanURL: >-
+    https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+  baseURL: https://support.zendesk.com
+  tags:
+  - Webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/atvenu-webhooks-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-request-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-incremental-items-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-services-zis-registry-integration-bundles-uuid-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-sunshine-objects-records-resourceid-relationships-relations-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-user-profiles-events-response-schema.json
+- aid: atvenu:atvenu-webstore-api
+  name: atVenu Webstore API
+  description: The Webstore API from atVenu — 1 operation(s) for webstore.
+  humanURL: >-
+    https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+  baseURL: https://support.zendesk.com
+  tags:
+  - Webstore
+  properties:
+  - type: OpenAPI
+    url: openapi/atvenu-webstore-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-request-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-incremental-items-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-services-zis-registry-integration-bundles-uuid-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-sunshine-objects-records-resourceid-relationships-relations-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-user-profiles-events-response-schema.json
+- aid: atvenu:atvenu-graph-ql-api
+  name: atVenu Graph QL API
+  description: The Graph QL API from atVenu — 1 operation(s) for graph ql.
+  humanURL: >-
+    https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+  baseURL: https://support.zendesk.com
+  tags:
+  - Graph QL
+  properties:
+  - type: OpenAPI
+    url: openapi/atvenu-graph-ql-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-request-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-incremental-items-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-put-api-v2-user-profiles-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-services-zis-registry-integration-bundles-uuid-response-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/atvenu-get-api-sunshine-objects-records-resourceid-relationships-relations-schema.json
+  - type: JSONSchema
+    url: json-schema/atvenu-get-api-v2-user-profiles-events-response-schema.json
 x-coverage:
   state: unreadable
   reason: no-machine-readable-spec

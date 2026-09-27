@@ -1,0 +1,923 @@
+openapi: 3.2.0
+info:
+  title: atVenu Services API
+  version: '2026-09-26'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-26: 45 operation(s) read from 31 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; atVenu has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 43
+    documentation: 2
+    pages-with-code: 29
+    pages-read: 31
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-26'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+  - https://developer.zendesk.com/documentation/ticketing/events/getting-started-with-events
+  - https://developer.zendesk.com/documentation/ticketing/profiles/getting-started-with-profiles
+  - https://developer.zendesk.com/documentation/custom-data/custom-objects/getting-started-with-custom-objects
+  - https://developer.zendesk.com/documentation/developer-tools/getting-started/getting-a-trial-or-sponsored-account-for-development
+  - https://developer.zendesk.com/api-reference/ticketing/introduction
+  - https://developer.zendesk.com/api-reference/status_api/status_api
+  - https://developer.zendesk.com/api-reference/live-chat/chat-conversations-api/conversations-api
+  - https://developer.zendesk.com/api-reference/integration-services/configs/configs
+  - https://developer.zendesk.com/api-reference/integration-services/connections/all_connections
+  - https://developer.zendesk.com/api-reference/integration-services/inbound-webhooks/inbound_webhooks
+  - https://developer.zendesk.com/api-reference/integration-services/links/links
+  - https://developer.zendesk.com/api-reference/integration-services/registry/bundles
+  - https://developer.zendesk.com/documentation/webhooks/creating-and-monitoring-webhooks
+  - https://developer.zendesk.com/documentation/event-connectors/webhooks/creating-and-monitoring-webhooks
+  - https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development
+  - https://developer.zendesk.com/documentation/api-basics/getting-started/installing-and-using-curl
+  - https://developer.zendesk.com/documentation/api-basics/getting-started/exploring-zendesk-apis-with-postman
+  - https://developer.zendesk.com/documentation/api-basics/best-practices/best-practices-for-avoiding-rate-limiting
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/working-with-json
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/searching-with-the-zendesk-api
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/side_loading
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/using-the-incremental-export-api
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/exporting-users
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/importing-users-with-the-zendesk-api
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/exporting-access-logs
+  - https://developer.zendesk.com/documentation/api-basics/pagination/paginating-through-lists-using-cursor-pagination
+  - https://developer.zendesk.com/documentation/api-basics/pagination/paginating-through-lists-using-offset-pagination
+  - https://developer.zendesk.com/documentation/api-basics/pagination/paginating-through-lists
+  - https://developer.zendesk.com/documentation/api-basics/pagination/understanding-the-limitations-of-offset-pagination
+  - https://developer.zendesk.com/documentation/api-basics/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+servers:
+- url: https://support.zendesk.com
+security:
+- bearer: []
+tags:
+- name: Services
+paths:
+  /api/services/zis/inbound_webhooks/generic/ingest/{token}:
+    post:
+      operationId: post_api_services_zis_inbound_webhooks_generic_ingest_token
+      tags:
+      - Services
+      summary: Ingest Incoming Webhook Requests
+      x-source: https://developer.zendesk.com/api-reference/integration-services/inbound-webhooks/inbound_webhooks
+      parameters:
+      - name: token
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiServicesZisInboundWebhooksGenericIngestTokenRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiServicesZisInboundWebhooksGenericIngestTokenResponse'
+      x-evidence:
+        kind: documentation
+  /api/services/zis/inbound_webhooks/generic/my_integration:
+    get:
+      operationId: get_api_services_zis_inbound_webhooks_generic_my_integration
+      tags:
+      - Services
+      summary: GET /api/services/zis/inbound_webhooks/generic/my_integration
+      x-source: https://developer.zendesk.com/api-reference/integration-services/inbound-webhooks/inbound_webhooks
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiServicesZisInboundWebhooksGenericMyIntegrationResponse'
+      x-evidence:
+        kind: code-example
+        language: ruby
+        snippet: URI ( "https://support.zendesk.com/api/services/zis/inbound_webhooks/generic/my_integration"
+  /api/services/zis/inbound_webhooks/generic/{integration}:
+    post:
+      operationId: post_api_services_zis_inbound_webhooks_generic_integration
+      tags:
+      - Services
+      summary: Create Inbound Webhook
+      x-source: https://developer.zendesk.com/api-reference/integration-services/inbound-webhooks/inbound_webhooks
+      parameters:
+      - name: integration
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiServicesZisInboundWebhooksGenericIntegrationRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiServicesZisInboundWebhooksGenericIntegrationResponse'
+      x-evidence:
+        kind: documentation
+  /api/services/zis/inbound_webhooks/generic/{integration}/{uuid}:
+    get:
+      operationId: get_api_services_zis_inbound_webhooks_generic_integration_uuid
+      tags:
+      - Services
+      summary: Show Inbound Webhook By UUID
+      x-source: https://developer.zendesk.com/api-reference/integration-services/inbound-webhooks/inbound_webhooks
+      parameters:
+      - name: integration
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: uuid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiServicesZisInboundWebhooksGenericIntegrationUuidRespon'
+      x-evidence:
+        kind: documentation
+  /api/services/zis/integrations/{integration}/configs:
+    get:
+      operationId: get_api_services_zis_integrations_integration_configs
+      tags:
+      - Services
+      summary: GET /api/services/zis/integrations/{integration}/configs
+      x-source: https://developer.zendesk.com/api-reference/integration-services/configs/configs
+      parameters:
+      - name: integration
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: filter[scope]
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiServicesZisIntegrationsIntegrationConfigsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl ''https://{subdomain}.zendesk.com/api/services/zis/integrations/{integration}/configs?filter[scope]=my_scope'' \ -g -H "Authorization: Bearer {access_token}" '
+    post:
+      operationId: post_api_services_zis_integrations_integration_configs
+      tags:
+      - Services
+      summary: POST /api/services/zis/integrations/{integration}/configs
+      x-source: https://developer.zendesk.com/api-reference/integration-services/configs/configs
+      parameters:
+      - name: integration
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiServicesZisIntegrationsIntegrationConfigsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST 'https://{subdomain}.zendesk.com/api/services/zis/integrations/{integration}/configs' \\ -H \"Authorization: Bearer {access_token}\" \\ -H 'Content-Type: application/json' \\ -d ' { \"config\": { \"description\": \"A config object can be anything, this is an example.\", \"id\": 999, \"name\": \"my_config\" }, \"scope\": \"my_scope\" }' \n Go \n import ( \"fmt\" \"io\" \"net/http\" \"strings\" ) \n func main ( ) { ur"
+  /api/services/zis/integrations/{integration}/configs/{configid}:
+    get:
+      operationId: get_api_services_zis_integrations_integration_configs_configid
+      tags:
+      - Services
+      summary: Show Configuration
+      x-source: https://developer.zendesk.com/api-reference/integration-services/configs/configs
+      parameters:
+      - name: integration
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: configid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiServicesZisIntegrationsIntegrationConfigsConfigidRespo'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at configId
+  /api/services/zis/integrations/{integration}/configs/{scope}:
+    delete:
+      operationId: delete_api_services_zis_integrations_integration_configs_scope
+      tags:
+      - Services
+      summary: Delete Configuration
+      x-source: https://developer.zendesk.com/api-reference/integration-services/configs/configs
+      parameters:
+      - name: integration
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: scope
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    patch:
+      operationId: patch_api_services_zis_integrations_integration_configs_scope
+      tags:
+      - Services
+      summary: Merge Configuration
+      x-source: https://developer.zendesk.com/api-reference/integration-services/configs/configs
+      parameters:
+      - name: integration
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: scope
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchApiServicesZisIntegrationsIntegrationConfigsScopeReques'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchApiServicesZisIntegrationsIntegrationConfigsScopeRespon'
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_api_services_zis_integrations_integration_configs_scope
+      tags:
+      - Services
+      summary: Update Configuration
+      x-source: https://developer.zendesk.com/api-reference/integration-services/configs/configs
+      parameters:
+      - name: integration
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: scope
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutApiServicesZisIntegrationsIntegrationConfigsScopeRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutApiServicesZisIntegrationsIntegrationConfigsScopeResponse'
+      x-evidence:
+        kind: documentation
+  /api/services/zis/integrations/{integration}/connections/all:
+    get:
+      operationId: get_api_services_zis_integrations_integration_connections_all
+      tags:
+      - Services
+      summary: Returns a list of connections of all types for the integration
+      x-source: https://developer.zendesk.com/api-reference/integration-services/connections/all_connections
+      parameters:
+      - name: integration
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: page[after]
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Cursor for the next set of results
+      - name: page[before]
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Cursor for the previous set of results
+      - name: page[size]
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Number of items to display in a results page. Can't exceed 100
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiServicesZisIntegrationsIntegrationConnectionsAllRespon'
+      x-evidence:
+        kind: documentation
+  /api/services/zis/links/{integration}:
+    delete:
+      operationId: delete_api_services_zis_links_integration
+      tags:
+      - Services
+      summary: DELETE /api/services/zis/links/{integration}
+      x-source: https://developer.zendesk.com/api-reference/integration-services/links/links
+      parameters:
+      - name: integration
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: left_object_name
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: link_type
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: right_object_name
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteApiServicesZisLinksIntegrationResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl 'https://{subdomain}.zendesk.com/api/services/zis/links/{integration}?link_type=example_link&left_object_name=zendesk:ticket1&right_object_name=external:object1' \\ -H \"Authorization: Bearer {access_token}\" \\ -X DELETE \n Go \n import ( \"fmt\" \"io\" \"net/http\" ) \n func main ( ) { url := \"https://support.zendesk.com/api/services/zis/links/my_integration?left_object_name=zendesk%3Aticket1&link_type="
+    get:
+      operationId: get_api_services_zis_links_integration
+      tags:
+      - Services
+      summary: GET /api/services/zis/links/{integration}
+      x-source: https://developer.zendesk.com/api-reference/integration-services/links/links
+      parameters:
+      - name: integration
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: left_object_name
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: link_type
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiServicesZisLinksIntegrationResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl ''https://{subdomain}.zendesk.com/api/services/zis/links/{integration}?link_type=example_link&left_object_name=zendesk:ticket1'' \ -H "Authorization: Bearer {access_token}" '
+    patch:
+      operationId: patch_api_services_zis_links_integration
+      tags:
+      - Services
+      summary: Update Link
+      x-source: https://developer.zendesk.com/api-reference/integration-services/links/links
+      parameters:
+      - name: integration
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: left_object_name
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The left object name of the target Link
+      - name: right_object_name
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The right object name of the target Link
+      - name: link_type
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The link type of the target Link
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchApiServicesZisLinksIntegrationRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchApiServicesZisLinksIntegrationResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_api_services_zis_links_integration
+      tags:
+      - Services
+      summary: Create Link
+      x-source: https://developer.zendesk.com/api-reference/integration-services/links/links
+      parameters:
+      - name: integration
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiServicesZisLinksIntegrationRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiServicesZisLinksIntegrationResponse'
+      x-evidence:
+        kind: documentation
+  /api/services/zis/registry/{integration}/bundles:
+    get:
+      operationId: get_api_services_zis_registry_integration_bundles
+      tags:
+      - Services
+      summary: List all existing bundles for an integration from the ZIS Registry
+      x-source: https://developer.zendesk.com/api-reference/integration-services/registry/bundles
+      parameters:
+      - name: integration
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: page[after]
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: pagination page number
+      - name: page[before]
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: pagination page number
+      - name: page[size]
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: pagination page size
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiServicesZisRegistryIntegrationBundlesResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_api_services_zis_registry_integration_bundles
+      tags:
+      - Services
+      summary: Uploads a new bundle or updates an existing bundle for a ZIS integration
+      x-source: https://developer.zendesk.com/api-reference/integration-services/registry/bundles
+      parameters:
+      - name: integration
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiServicesZisRegistryIntegrationBundlesRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/services/zis/registry/{integration}/bundles/{uuid}:
+    delete:
+      operationId: delete_api_services_zis_registry_integration_bundles_uuid
+      tags:
+      - Services
+      summary: Delete a bundle for a ZIS integration
+      x-source: https://developer.zendesk.com/api-reference/integration-services/registry/bundles
+      parameters:
+      - name: integration
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: uuid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    get:
+      operationId: get_api_services_zis_registry_integration_bundles_uuid
+      tags:
+      - Services
+      summary: Returns information about an uploaded bundle
+      x-source: https://developer.zendesk.com/api-reference/integration-services/registry/bundles
+      parameters:
+      - name: integration
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: uuid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiServicesZisRegistryIntegrationBundlesUuidResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    DeleteApiServicesZisLinksIntegrationResponse:
+      type: object
+      properties:
+        method:
+          type: string
+        url:
+          type: string
+        headers:
+          type: object
+          properties:
+            Content-Type:
+              type: string
+        params:
+          type: object
+          properties:
+            left_object_name:
+              type: string
+            link_type:
+              type: string
+            right_object_name:
+              type: string
+    PutApiServicesZisIntegrationsIntegrationConfigsScopeResponse:
+      type: object
+      properties:
+        config:
+          type: object
+          description: Updated configuration object
+    PostApiServicesZisLinksIntegrationResponse:
+      type: object
+      properties:
+        link:
+          type: object
+          description: Created link object
+    GetApiServicesZisInboundWebhooksGenericMyIntegrationResponse:
+      type: object
+      properties:
+        event_type:
+          type: string
+        id:
+          type: string
+        integration:
+          type: string
+        password:
+          type: string
+        path:
+          type: string
+        source_system:
+          type: string
+        username:
+          type: string
+        uuid:
+          type: string
+        zendesk_account_id:
+          type: integer
+    PatchApiServicesZisLinksIntegrationResponse:
+      type: object
+      properties:
+        link:
+          type: object
+          description: Updated link object
+    PutApiServicesZisIntegrationsIntegrationConfigsScopeRequest:
+      type: object
+      properties:
+        config:
+          type: object
+          description: The Config JSON object.
+    PostApiServicesZisInboundWebhooksGenericIngestTokenRequest:
+      type: object
+      properties:
+        body:
+          type: string
+          description: Example field in the webhook payload
+        subject:
+          type: string
+          description: Example field in the webhook payload
+    PatchApiServicesZisLinksIntegrationRequest:
+      type: object
+      properties:
+        left_object:
+          type: object
+          description: Updated left object data; metadata will be merged
+        right_object:
+          type: object
+          description: Updated right object data; metadata will be merged
+        link_type:
+          type: string
+          description: The type assigned to the link
+    PostApiServicesZisInboundWebhooksGenericIntegrationResponse:
+      type: object
+      properties:
+        '201':
+          type: string
+          description: Created – Returns the created webhook object
+        '401':
+          type: string
+          description: Unauthorized – Authentication failed
+    PostApiServicesZisInboundWebhooksGenericIntegrationRequest:
+      type: object
+      properties:
+        event_type:
+          type: string
+          description: Descriptor of the event type that will trigger the webhook
+        source_system:
+          type: string
+          description: Descriptor of the system that will trigger the webhook
+    PostApiServicesZisInboundWebhooksGenericIngestTokenResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: OK
+        '401':
+          type: string
+          description: Unauthorized – Authentication failed
+    GetApiServicesZisInboundWebhooksGenericIntegrationUuidRespon:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: OK – Returns webhook details
+        '404':
+          type: string
+          description: Not Found – Webhook not found
+    PostApiServicesZisRegistryIntegrationBundlesRequest:
+      type: object
+      properties:
+        description:
+          type: string
+          description: The description of the bundle
+        name:
+          type: string
+          description: The name of the bundle
+        resources:
+          type: object
+          description: A collection of ZIS resources
+        zis_template_version:
+          type: string
+          description: The ZIS bundle template version. Allowed value of "2019-10-14".
+      required:
+      - name
+      - resources
+      - zis_template_version
+    GetApiServicesZisRegistryIntegrationBundlesResponse:
+      type: object
+      properties:
+        bundles:
+          type: array
+          description: Array of bundle objects
+        meta:
+          type: object
+          description: Pagination metadata
+    PostApiServicesZisIntegrationsIntegrationConfigsResponse:
+      type: object
+      properties:
+        config:
+          type: object
+          properties:
+            config:
+              type: object
+              properties:
+                description:
+                  type: string
+                id:
+                  type: integer
+                name:
+                  type: string
+            created_at:
+              type: string
+              format: date-time
+            id:
+              type: integer
+            integration:
+              type: string
+            scope:
+              type: string
+            updated_at:
+              type: string
+              format: date-time
+            zendesk_account_id:
+              type: integer
+    GetApiServicesZisIntegrationsIntegrationConfigsConfigidRespo:
+      type: object
+      properties:
+        configs:
+          type: array
+          description: Array of configuration objects
+    GetApiServicesZisIntegrationsIntegrationConnectionsAllRespon:
+      type: object
+      properties:
+        api_key:
+          type: array
+          description: Array of API key connections.
+        basic_auth:
+          type: array
+          description: Array of basic authentication connections.
+        bearer_token:
+          type: array
+          description: Array of bearer token connections.
+        meta:
+          type: object
+          description: Used to paginate results using cursor pagination.
+        oauth:
+          type: array
+          description: Array of OAuth connections.
+    GetApiServicesZisRegistryIntegrationBundlesUuidResponse:
+      type: object
+      properties:
+        description:
+          type: string
+          description: The description of the bundle
+        integration:
+          type: string
+          description: The integration name
+        name:
+          type: string
+          description: The bundle name
+        resources:
+          type: object
+          description: Bundle resources
+        uuid:
+          type: string
+          description: The UUID of the bundle
+        zendesk_account_id:
+          type: integer
+          description: Zendesk Account ID
+        zis_template_version:
+          type: string
+          description: The ZIS bundle template version
+    PatchApiServicesZisIntegrationsIntegrationConfigsScopeReques:
+      type: object
+      properties:
+        config:
+          type: object
+          description: The Config JSON object.
+    GetApiServicesZisLinksIntegrationResponse:
+      type: object
+      properties:
+        method:
+          type: string
+        url:
+          type: string
+        headers:
+          type: object
+          properties:
+            Content-Type:
+              type: string
+        params:
+          type: object
+          properties:
+            left_object_name:
+              type: string
+            link_type:
+              type: string
+            right_object_name:
+              type: string
+    GetApiServicesZisIntegrationsIntegrationConfigsResponse:
+      type: object
+      properties:
+        method:
+          type: string
+        url:
+          type: string
+        headers:
+          type: object
+          properties:
+            Content-Type:
+              type: string
+        params:
+          type: object
+          properties:
+            filter[scope]:
+              type: string
+            page[after]:
+              type: string
+            page[size]:
+              type: string
+    PostApiServicesZisLinksIntegrationRequest:
+      type: object
+      properties:
+        left_object:
+          type: object
+          description: Data of the entity to be linked
+        right_object:
+          type: object
+          description: Data of the entity to be linked
+        link_type:
+          type: string
+          description: The type assigned to the link
+      required:
+      - left_object
+      - right_object
+      - link_type
+    PatchApiServicesZisIntegrationsIntegrationConfigsScopeRespon:
+      type: object
+      properties:
+        config:
+          type: object
+          description: Merged configuration object
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

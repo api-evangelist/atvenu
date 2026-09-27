@@ -1,0 +1,101 @@
+openapi: 3.2.0
+info:
+  title: atVenu Incidents API
+  version: '2026-09-26'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-26: 45 operation(s) read from 31 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; atVenu has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 43
+    documentation: 2
+    pages-with-code: 29
+    pages-read: 31
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-26'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+  - https://developer.zendesk.com/documentation/ticketing/events/getting-started-with-events
+  - https://developer.zendesk.com/documentation/ticketing/profiles/getting-started-with-profiles
+  - https://developer.zendesk.com/documentation/custom-data/custom-objects/getting-started-with-custom-objects
+  - https://developer.zendesk.com/documentation/developer-tools/getting-started/getting-a-trial-or-sponsored-account-for-development
+  - https://developer.zendesk.com/api-reference/ticketing/introduction
+  - https://developer.zendesk.com/api-reference/status_api/status_api
+  - https://developer.zendesk.com/api-reference/live-chat/chat-conversations-api/conversations-api
+  - https://developer.zendesk.com/api-reference/integration-services/configs/configs
+  - https://developer.zendesk.com/api-reference/integration-services/connections/all_connections
+  - https://developer.zendesk.com/api-reference/integration-services/inbound-webhooks/inbound_webhooks
+  - https://developer.zendesk.com/api-reference/integration-services/links/links
+  - https://developer.zendesk.com/api-reference/integration-services/registry/bundles
+  - https://developer.zendesk.com/documentation/webhooks/creating-and-monitoring-webhooks
+  - https://developer.zendesk.com/documentation/event-connectors/webhooks/creating-and-monitoring-webhooks
+  - https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development
+  - https://developer.zendesk.com/documentation/api-basics/getting-started/installing-and-using-curl
+  - https://developer.zendesk.com/documentation/api-basics/getting-started/exploring-zendesk-apis-with-postman
+  - https://developer.zendesk.com/documentation/api-basics/best-practices/best-practices-for-avoiding-rate-limiting
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/working-with-json
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/searching-with-the-zendesk-api
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/side_loading
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/using-the-incremental-export-api
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/exporting-users
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/importing-users-with-the-zendesk-api
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/exporting-access-logs
+  - https://developer.zendesk.com/documentation/api-basics/pagination/paginating-through-lists-using-cursor-pagination
+  - https://developer.zendesk.com/documentation/api-basics/pagination/paginating-through-lists-using-offset-pagination
+  - https://developer.zendesk.com/documentation/api-basics/pagination/paginating-through-lists
+  - https://developer.zendesk.com/documentation/api-basics/pagination/understanding-the-limitations-of-offset-pagination
+  - https://developer.zendesk.com/documentation/api-basics/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+servers:
+- url: https://support.zendesk.com
+security:
+- bearer: []
+tags:
+- name: Incidents
+paths:
+  /api/incidents:
+    get:
+      operationId: get_api_incidents
+      tags:
+      - Incidents
+      summary: GET /api/incidents
+      x-source: https://developer.zendesk.com/api-reference/status_api/status_api
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiIncidentsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl https://status.zendesk.com/api/incidents/ { incident_id } } ?include [ ] = incident_services,incident_updates,incident_services.service \n Go \n import ( \"fmt\" \"io\" \"net/http\" ) \n func main ( ) { url := \"https://support.zendesk.com/api/incidents/247?include[]=incident_updates%2Cincident_services%2Cincident_services.service\" method := \"GET\" req , err := http . NewRequest ( method , url , nil ) \n"
+components:
+  schemas:
+    GetApiIncidentsResponse:
+      type: object
+      properties:
+        degradation:
+          type: boolean
+        impact:
+          type: string
+        outage:
+          type: boolean
+        postmortem:
+          type: string
+        resolved_at:
+          type:
+          - string
+          - 'null'
+        started_at:
+          type: string
+          format: date-time
+        status:
+          type: string
+        title:
+          type: string
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

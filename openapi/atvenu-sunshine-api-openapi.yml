@@ -1,0 +1,278 @@
+openapi: 3.2.0
+info:
+  title: atVenu Sunshine API
+  version: '2026-09-26'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-26: 45 operation(s) read from 31 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; atVenu has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 43
+    documentation: 2
+    pages-with-code: 29
+    pages-read: 31
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-26'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+  - https://developer.zendesk.com/documentation/ticketing/events/getting-started-with-events
+  - https://developer.zendesk.com/documentation/ticketing/profiles/getting-started-with-profiles
+  - https://developer.zendesk.com/documentation/custom-data/custom-objects/getting-started-with-custom-objects
+  - https://developer.zendesk.com/documentation/developer-tools/getting-started/getting-a-trial-or-sponsored-account-for-development
+  - https://developer.zendesk.com/api-reference/ticketing/introduction
+  - https://developer.zendesk.com/api-reference/status_api/status_api
+  - https://developer.zendesk.com/api-reference/live-chat/chat-conversations-api/conversations-api
+  - https://developer.zendesk.com/api-reference/integration-services/configs/configs
+  - https://developer.zendesk.com/api-reference/integration-services/connections/all_connections
+  - https://developer.zendesk.com/api-reference/integration-services/inbound-webhooks/inbound_webhooks
+  - https://developer.zendesk.com/api-reference/integration-services/links/links
+  - https://developer.zendesk.com/api-reference/integration-services/registry/bundles
+  - https://developer.zendesk.com/documentation/webhooks/creating-and-monitoring-webhooks
+  - https://developer.zendesk.com/documentation/event-connectors/webhooks/creating-and-monitoring-webhooks
+  - https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development
+  - https://developer.zendesk.com/documentation/api-basics/getting-started/installing-and-using-curl
+  - https://developer.zendesk.com/documentation/api-basics/getting-started/exploring-zendesk-apis-with-postman
+  - https://developer.zendesk.com/documentation/api-basics/best-practices/best-practices-for-avoiding-rate-limiting
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/working-with-json
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/searching-with-the-zendesk-api
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/side_loading
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/using-the-incremental-export-api
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/exporting-users
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/importing-users-with-the-zendesk-api
+  - https://developer.zendesk.com/documentation/api-basics/working-with-data/exporting-access-logs
+  - https://developer.zendesk.com/documentation/api-basics/pagination/paginating-through-lists-using-cursor-pagination
+  - https://developer.zendesk.com/documentation/api-basics/pagination/paginating-through-lists-using-offset-pagination
+  - https://developer.zendesk.com/documentation/api-basics/pagination/paginating-through-lists
+  - https://developer.zendesk.com/documentation/api-basics/pagination/understanding-the-limitations-of-offset-pagination
+  - https://developer.zendesk.com/documentation/api-basics/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
+servers:
+- url: https://support.zendesk.com
+security:
+- bearer: []
+tags:
+- name: Sunshine
+paths:
+  /api/sunshine/objects/records/{resourceId}/relationships/{relationshipTypeKey}:
+    get:
+      operationId: get_api_sunshine_objects_records_resourceId_relationships_relationshipTypeKey
+      tags:
+      - Sunshine
+      summary: List legacy relationship records for a given object record
+      x-source: https://developer.zendesk.com/documentation/custom-data/custom-objects/getting-started-with-custom-objects
+      parameters:
+      - name: resourceId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: relationshipTypeKey
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiSunshineObjectsRecordsResourceidRelationshipsRelations'
+      x-evidence:
+        kind: documentation
+  /api/sunshine/objects/{objectid}:
+    post:
+      operationId: post_api_sunshine_objects_objectid
+      tags:
+      - Sunshine
+      summary: Create a legacy custom object record
+      x-source: https://developer.zendesk.com/documentation/custom-data/custom-objects/getting-started-with-custom-objects
+      parameters:
+      - name: objectid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiSunshineObjectsObjectidRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiSunshineObjectsObjectidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at objectId
+  /api/sunshine/{sunshineid}/records:
+    post:
+      operationId: post_api_sunshine_sunshineid_records
+      tags:
+      - Sunshine
+      summary: Create a legacy relationship record
+      x-source: https://developer.zendesk.com/documentation/custom-data/custom-objects/getting-started-with-custom-objects
+      parameters:
+      - name: sunshineid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiSunshineSunshineidRecordsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiSunshineSunshineidRecordsResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at sunshineId
+  /api/sunshine/{sunshineid}/types:
+    post:
+      operationId: post_api_sunshine_sunshineid_types
+      tags:
+      - Sunshine
+      summary: Create a legacy custom object type
+      x-source: https://developer.zendesk.com/documentation/custom-data/custom-objects/getting-started-with-custom-objects
+      parameters:
+      - name: sunshineid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiSunshineSunshineidTypesRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiSunshineSunshineidTypesResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at sunshineId
+components:
+  schemas:
+    PostApiSunshineSunshineidTypesResponse:
+      type: object
+      properties:
+        data.key:
+          type: string
+          description: The key of the created object type.
+        data.schema:
+          type: object
+          description: The schema of the created object type.
+        data.created_at:
+          type: string
+          description: Timestamp when the object type was created.
+        data.updated_at:
+          type: string
+          description: Timestamp when the object type was last updated.
+    PostApiSunshineSunshineidRecordsRequest:
+      type: object
+      properties:
+        data.relationship_type:
+          type: string
+          description: Key of the relationship type to use.
+        data.source:
+          type: string
+          description: ID of the source object (legacy record ID or Zendesk identifier).
+        data.target:
+          type: string
+          description: ID of the target object (legacy record ID or Zendesk identifier).
+      required:
+      - data.relationship_type
+      - data.source
+      - data.target
+    PostApiSunshineSunshineidRecordsResponse:
+      type: object
+      properties:
+        data.id:
+          type: string
+          description: The internal ID of the created relationship record.
+        data.relationship_record_type:
+          type: string
+          description: The relationship type key.
+        data.source:
+          type: string
+          description: Source object ID.
+        data.target:
+          type: string
+          description: Target object ID.
+        data.created_at:
+          type: string
+          description: Timestamp when the relationship record was created.
+    PostApiSunshineSunshineidTypesRequest:
+      type: object
+      properties:
+        data.key:
+          type: string
+          description: The unique key that identifies the object type.
+        data.schema:
+          type: object
+          description: The JSON schema that defines the object's properties.
+      required:
+      - data.key
+      - data.schema
+    GetApiSunshineObjectsRecordsResourceidRelationshipsRelations:
+      type: object
+      properties:
+        data:
+          type: array
+          description: Array of relationship records.
+        data[].id:
+          type: string
+          description: ID of the relationship record.
+        data[].target:
+          type: string
+          description: Target object identifier.
+        data[].ref:
+          type: string
+          description: Reference URL to the target object.
+        links.previous:
+          type: string
+          description: Link to previous page of results (if any).
+        links.next:
+          type: string
+          description: Link to next page of results (if any).
+    PostApiSunshineObjectsObjectidRequest:
+      type: object
+      properties:
+        data.type:
+          type: string
+          description: The key of the object type for the record (e.g., "pc").
+        data.attributes:
+          type: object
+          description: Attributes defined by the object type schema.
+      required:
+      - data.type
+      - data.attributes
+    PostApiSunshineObjectsObjectidResponse:
+      type: object
+      properties:
+        data.type:
+          type: string
+          description: The object type of the created record.
+        data.id:
+          type: string
+          description: The internal Zendesk record ID for the created object.
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
