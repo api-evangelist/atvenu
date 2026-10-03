@@ -20,7 +20,9 @@
     "atvenu-webhooks-api-openapi.yml",
     "atvenu-webstore-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
   "notes": [
@@ -75,7 +77,24 @@
     "atvenu-openapi-generated.yml: declared missing tag: User Profiles",
     "atvenu-openapi-generated.yml: declared missing tag: Users",
     "atvenu-openapi-generated.yml: declared missing tag: Webhooks",
-    "apis.yml register: written (+15 apis, 15 total)"
+    "superseded outputs removed: atvenu-graph-ql-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 15 total)"
   ],
-  "skipped": []
+  "skipped": [
+    "atvenu-atvenu-api-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atvenu-download-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atvenu-downloads-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atvenu-graph-ql-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atvenu-help-center-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atvenu-incidents-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atvenu-incremental-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atvenu-register-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atvenu-services-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atvenu-sunshine-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atvenu-tickets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atvenu-user-profiles-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atvenu-users-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atvenu-webhooks-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "atvenu-webstore-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

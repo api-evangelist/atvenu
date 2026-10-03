@@ -184,22 +184,18 @@ components:
         data.updated_at:
           type: string
           description: Timestamp when the object type was last updated.
-    PostApiSunshineSunshineidRecordsRequest:
+    PostApiSunshineSunshineidTypesRequest:
       type: object
       properties:
-        data.relationship_type:
+        data.key:
           type: string
-          description: Key of the relationship type to use.
-        data.source:
-          type: string
-          description: ID of the source object (legacy record ID or Zendesk identifier).
-        data.target:
-          type: string
-          description: ID of the target object (legacy record ID or Zendesk identifier).
+          description: The unique key that identifies the object type.
+        data.schema:
+          type: object
+          description: The JSON schema that defines the object's properties.
       required:
-      - data.relationship_type
-      - data.source
-      - data.target
+      - data.key
+      - data.schema
     PostApiSunshineSunshineidRecordsResponse:
       type: object
       properties:
@@ -218,18 +214,6 @@ components:
         data.created_at:
           type: string
           description: Timestamp when the relationship record was created.
-    PostApiSunshineSunshineidTypesRequest:
-      type: object
-      properties:
-        data.key:
-          type: string
-          description: The unique key that identifies the object type.
-        data.schema:
-          type: object
-          description: The JSON schema that defines the object's properties.
-      required:
-      - data.key
-      - data.schema
     GetApiSunshineObjectsRecordsResourceidRelationshipsRelations:
       type: object
       properties:
@@ -251,6 +235,15 @@ components:
         links.next:
           type: string
           description: Link to next page of results (if any).
+    PostApiSunshineObjectsObjectidResponse:
+      type: object
+      properties:
+        data.type:
+          type: string
+          description: The object type of the created record.
+        data.id:
+          type: string
+          description: The internal Zendesk record ID for the created object.
     PostApiSunshineObjectsObjectidRequest:
       type: object
       properties:
@@ -263,15 +256,22 @@ components:
       required:
       - data.type
       - data.attributes
-    PostApiSunshineObjectsObjectidResponse:
+    PostApiSunshineSunshineidRecordsRequest:
       type: object
       properties:
-        data.type:
+        data.relationship_type:
           type: string
-          description: The object type of the created record.
-        data.id:
+          description: Key of the relationship type to use.
+        data.source:
           type: string
-          description: The internal Zendesk record ID for the created object.
+          description: ID of the source object (legacy record ID or Zendesk identifier).
+        data.target:
+          type: string
+          description: ID of the target object (legacy record ID or Zendesk identifier).
+      required:
+      - data.relationship_type
+      - data.source
+      - data.target
   securitySchemes:
     bearer:
       type: http

@@ -619,111 +619,12 @@ paths:
         kind: documentation
 components:
   schemas:
-    DeleteApiServicesZisLinksIntegrationResponse:
-      type: object
-      properties:
-        method:
-          type: string
-        url:
-          type: string
-        headers:
-          type: object
-          properties:
-            Content-Type:
-              type: string
-        params:
-          type: object
-          properties:
-            left_object_name:
-              type: string
-            link_type:
-              type: string
-            right_object_name:
-              type: string
-    PutApiServicesZisIntegrationsIntegrationConfigsScopeResponse:
+    PatchApiServicesZisIntegrationsIntegrationConfigsScopeRespon:
       type: object
       properties:
         config:
           type: object
-          description: Updated configuration object
-    PostApiServicesZisLinksIntegrationResponse:
-      type: object
-      properties:
-        link:
-          type: object
-          description: Created link object
-    GetApiServicesZisInboundWebhooksGenericMyIntegrationResponse:
-      type: object
-      properties:
-        event_type:
-          type: string
-        id:
-          type: string
-        integration:
-          type: string
-        password:
-          type: string
-        path:
-          type: string
-        source_system:
-          type: string
-        username:
-          type: string
-        uuid:
-          type: string
-        zendesk_account_id:
-          type: integer
-    PatchApiServicesZisLinksIntegrationResponse:
-      type: object
-      properties:
-        link:
-          type: object
-          description: Updated link object
-    PutApiServicesZisIntegrationsIntegrationConfigsScopeRequest:
-      type: object
-      properties:
-        config:
-          type: object
-          description: The Config JSON object.
-    PostApiServicesZisInboundWebhooksGenericIngestTokenRequest:
-      type: object
-      properties:
-        body:
-          type: string
-          description: Example field in the webhook payload
-        subject:
-          type: string
-          description: Example field in the webhook payload
-    PatchApiServicesZisLinksIntegrationRequest:
-      type: object
-      properties:
-        left_object:
-          type: object
-          description: Updated left object data; metadata will be merged
-        right_object:
-          type: object
-          description: Updated right object data; metadata will be merged
-        link_type:
-          type: string
-          description: The type assigned to the link
-    PostApiServicesZisInboundWebhooksGenericIntegrationResponse:
-      type: object
-      properties:
-        '201':
-          type: string
-          description: Created – Returns the created webhook object
-        '401':
-          type: string
-          description: Unauthorized – Authentication failed
-    PostApiServicesZisInboundWebhooksGenericIntegrationRequest:
-      type: object
-      properties:
-        event_type:
-          type: string
-          description: Descriptor of the event type that will trigger the webhook
-        source_system:
-          type: string
-          description: Descriptor of the system that will trigger the webhook
+          description: Merged configuration object
     PostApiServicesZisInboundWebhooksGenericIngestTokenResponse:
       type: object
       properties:
@@ -733,43 +634,6 @@ components:
         '401':
           type: string
           description: Unauthorized – Authentication failed
-    GetApiServicesZisInboundWebhooksGenericIntegrationUuidRespon:
-      type: object
-      properties:
-        '200':
-          type: string
-          description: OK – Returns webhook details
-        '404':
-          type: string
-          description: Not Found – Webhook not found
-    PostApiServicesZisRegistryIntegrationBundlesRequest:
-      type: object
-      properties:
-        description:
-          type: string
-          description: The description of the bundle
-        name:
-          type: string
-          description: The name of the bundle
-        resources:
-          type: object
-          description: A collection of ZIS resources
-        zis_template_version:
-          type: string
-          description: The ZIS bundle template version. Allowed value of "2019-10-14".
-      required:
-      - name
-      - resources
-      - zis_template_version
-    GetApiServicesZisRegistryIntegrationBundlesResponse:
-      type: object
-      properties:
-        bundles:
-          type: array
-          description: Array of bundle objects
-        meta:
-          type: object
-          description: Pagination metadata
     PostApiServicesZisIntegrationsIntegrationConfigsResponse:
       type: object
       properties:
@@ -799,12 +663,43 @@ components:
               format: date-time
             zendesk_account_id:
               type: integer
-    GetApiServicesZisIntegrationsIntegrationConfigsConfigidRespo:
+    PostApiServicesZisInboundWebhooksGenericIngestTokenRequest:
       type: object
       properties:
-        configs:
-          type: array
-          description: Array of configuration objects
+        body:
+          type: string
+          description: Example field in the webhook payload
+        subject:
+          type: string
+          description: Example field in the webhook payload
+    PostApiServicesZisRegistryIntegrationBundlesRequest:
+      type: object
+      properties:
+        description:
+          type: string
+          description: The description of the bundle
+        name:
+          type: string
+          description: The name of the bundle
+        resources:
+          type: object
+          description: A collection of ZIS resources
+        zis_template_version:
+          type: string
+          description: The ZIS bundle template version. Allowed value of "2019-10-14".
+      required:
+      - name
+      - resources
+      - zis_template_version
+    GetApiServicesZisInboundWebhooksGenericIntegrationUuidRespon:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: OK – Returns webhook details
+        '404':
+          type: string
+          description: Not Found – Webhook not found
     GetApiServicesZisIntegrationsIntegrationConnectionsAllRespon:
       type: object
       properties:
@@ -823,6 +718,15 @@ components:
         oauth:
           type: array
           description: Array of OAuth connections.
+    PostApiServicesZisInboundWebhooksGenericIntegrationRequest:
+      type: object
+      properties:
+        event_type:
+          type: string
+          description: Descriptor of the event type that will trigger the webhook
+        source_system:
+          type: string
+          description: Descriptor of the system that will trigger the webhook
     GetApiServicesZisRegistryIntegrationBundlesUuidResponse:
       type: object
       properties:
@@ -847,12 +751,30 @@ components:
         zis_template_version:
           type: string
           description: The ZIS bundle template version
-    PatchApiServicesZisIntegrationsIntegrationConfigsScopeReques:
+    PostApiServicesZisInboundWebhooksGenericIntegrationResponse:
       type: object
       properties:
-        config:
+        '201':
+          type: string
+          description: Created – Returns the created webhook object
+        '401':
+          type: string
+          description: Unauthorized – Authentication failed
+    PatchApiServicesZisLinksIntegrationResponse:
+      type: object
+      properties:
+        link:
           type: object
-          description: The Config JSON object.
+          description: Updated link object
+    GetApiServicesZisRegistryIntegrationBundlesResponse:
+      type: object
+      properties:
+        bundles:
+          type: array
+          description: Array of bundle objects
+        meta:
+          type: object
+          description: Pagination metadata
     GetApiServicesZisLinksIntegrationResponse:
       type: object
       properties:
@@ -874,6 +796,24 @@ components:
               type: string
             right_object_name:
               type: string
+    PatchApiServicesZisLinksIntegrationRequest:
+      type: object
+      properties:
+        left_object:
+          type: object
+          description: Updated left object data; metadata will be merged
+        right_object:
+          type: object
+          description: Updated right object data; metadata will be merged
+        link_type:
+          type: string
+          description: The type assigned to the link
+    PostApiServicesZisLinksIntegrationResponse:
+      type: object
+      properties:
+        link:
+          type: object
+          description: Created link object
     GetApiServicesZisIntegrationsIntegrationConfigsResponse:
       type: object
       properties:
@@ -895,6 +835,33 @@ components:
               type: string
             page[size]:
               type: string
+    DeleteApiServicesZisLinksIntegrationResponse:
+      type: object
+      properties:
+        method:
+          type: string
+        url:
+          type: string
+        headers:
+          type: object
+          properties:
+            Content-Type:
+              type: string
+        params:
+          type: object
+          properties:
+            left_object_name:
+              type: string
+            link_type:
+              type: string
+            right_object_name:
+              type: string
+    PatchApiServicesZisIntegrationsIntegrationConfigsScopeReques:
+      type: object
+      properties:
+        config:
+          type: object
+          description: The Config JSON object.
     PostApiServicesZisLinksIntegrationRequest:
       type: object
       properties:
@@ -911,12 +878,45 @@ components:
       - left_object
       - right_object
       - link_type
-    PatchApiServicesZisIntegrationsIntegrationConfigsScopeRespon:
+    PutApiServicesZisIntegrationsIntegrationConfigsScopeResponse:
       type: object
       properties:
         config:
           type: object
-          description: Merged configuration object
+          description: Updated configuration object
+    PutApiServicesZisIntegrationsIntegrationConfigsScopeRequest:
+      type: object
+      properties:
+        config:
+          type: object
+          description: The Config JSON object.
+    GetApiServicesZisIntegrationsIntegrationConfigsConfigidRespo:
+      type: object
+      properties:
+        configs:
+          type: array
+          description: Array of configuration objects
+    GetApiServicesZisInboundWebhooksGenericMyIntegrationResponse:
+      type: object
+      properties:
+        event_type:
+          type: string
+        id:
+          type: string
+        integration:
+          type: string
+        password:
+          type: string
+        path:
+          type: string
+        source_system:
+          type: string
+        username:
+          type: string
+        uuid:
+          type: string
+        zendesk_account_id:
+          type: integer
   securitySchemes:
     bearer:
       type: http

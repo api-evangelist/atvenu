@@ -138,6 +138,12 @@ components:
             properties:
               requester_id:
                 type: integer
+    PostApiV2UsersUseridEventsResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Indicates the event was received
     PostApiV2UsersCreateManyJsonRequest:
       type: object
       properties:
@@ -158,12 +164,6 @@ components:
       required:
       - profile
       - event
-    PostApiV2UsersUseridEventsResponse:
-      type: object
-      properties:
-        status:
-          type: string
-          description: Indicates the event was received
   securitySchemes:
     bearer:
       type: http
