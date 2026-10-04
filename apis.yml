@@ -28,6 +28,12 @@ tags:
 - Payments
 - Live Events
 - Commerce
+- Point-of-Sale
+tags_raw:
+- Company
+- Payments
+- Live Events
+- Commerce
 - POS
 
 maintainers:
@@ -107,6 +113,8 @@ apis:
     https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
   baseURL: https://support.zendesk.com
   tags:
+  - Downloads
+  tags_raw:
   - Download
   properties:
   - type: OpenAPI
@@ -307,6 +315,8 @@ apis:
     https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
   baseURL: https://support.zendesk.com
   tags:
+  - Ticketing
+  tags_raw:
   - Tickets
   properties:
   - type: OpenAPI
@@ -357,6 +367,8 @@ apis:
     https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
   baseURL: https://support.zendesk.com
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
@@ -382,6 +394,8 @@ apis:
     https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
   baseURL: https://support.zendesk.com
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI
@@ -407,6 +421,8 @@ apis:
     https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
   baseURL: https://support.zendesk.com
   tags:
+  - Web Store
+  tags_raw:
   - Webstore
   properties:
   - type: OpenAPI
@@ -432,6 +448,8 @@ apis:
     https://developer.zendesk.com/documentation/developer-tools/working-with-the-zendesk-apis/exploring-zendesk-apis-with-postman
   baseURL: https://support.zendesk.com
   tags:
+  - GraphQL
+  tags_raw:
   - Graph QL
   properties:
   - type: OpenAPI
