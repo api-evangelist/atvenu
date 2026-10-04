@@ -128,6 +128,20 @@ paths:
         kind: documentation
 components:
   schemas:
+    PostApiV2UsersCreateManyJsonRequest:
+      type: object
+      properties:
+        users:
+          type: array
+          description: A list of user objects to create.
+      required:
+      - users
+    PostApiV2UsersUseridEventsResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Indicates the event was received
     GetApiV2UsersUseridResponse:
       type: object
       properties:
@@ -138,20 +152,6 @@ components:
             properties:
               requester_id:
                 type: integer
-    PostApiV2UsersUseridEventsResponse:
-      type: object
-      properties:
-        status:
-          type: string
-          description: Indicates the event was received
-    PostApiV2UsersCreateManyJsonRequest:
-      type: object
-      properties:
-        users:
-          type: array
-          description: A list of user objects to create.
-      required:
-      - users
     PostApiV2UsersUseridEventsRequest:
       type: object
       properties:

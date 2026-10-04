@@ -180,6 +180,33 @@ paths:
         kind: documentation
 components:
   schemas:
+    GetApiV2UserProfilesProfileidEventsResponse:
+      type: object
+      properties:
+        events:
+          type: array
+          description: List of event objects associated with the profile.
+    PatchApiV2UserProfilesResponse:
+      type: object
+      properties:
+        profile.id:
+          type: string
+        profile.user_id:
+          type: string
+        profile.source:
+          type: string
+        profile.type:
+          type: string
+        profile.name:
+          type: string
+        profile.attributes:
+          type: object
+        profile.identifiers:
+          type: array
+        profile.created_at:
+          type: string
+        profile.updated_at:
+          type: string
     PutApiV2UserProfilesRequest:
       type: object
       properties:
@@ -211,96 +238,6 @@ components:
       - profile.identifiers
       - profile.identifiers[].type
       - profile.identifiers[].value
-    GetApiV2UserProfilesProfileidEventsResponse:
-      type: object
-      properties:
-        events:
-          type: array
-          description: List of event objects associated with the profile.
-    PutApiV2UserProfilesResponse:
-      type: object
-      properties:
-        profile.id:
-          type: string
-          description: Unique identifier of the profile.
-        profile.user_id:
-          type: string
-          description: Zendesk user id associated with the profile.
-        profile.source:
-          type: string
-        profile.type:
-          type: string
-        profile.name:
-          type: string
-        profile.attributes:
-          type: object
-        profile.identifiers:
-          type: array
-        profile.created_at:
-          type: string
-          description: Timestamp of creation.
-        profile.updated_at:
-          type: string
-          description: Timestamp of last update.
-    PatchApiV2UserProfilesRequest:
-      type: object
-      properties:
-        profile:
-          type: object
-          description: Partial profile object with fields to be updated.
-        profile.identifiers:
-          type: array
-          description: Array of identifier objects to add.
-        profile.identifiers[].type:
-          type: string
-          description: Identifier type, e.g. "office_phone".
-        profile.identifiers[].value:
-          type: string
-          description: Identifier value.
-      required:
-      - profile
-      - profile.identifiers
-      - profile.identifiers[].type
-      - profile.identifiers[].value
-    PostApiV2UserProfilesEventsResponse:
-      type: object
-      properties:
-        status:
-          type: string
-          description: Indicates the event was received
-    PatchApiV2UserProfilesResponse:
-      type: object
-      properties:
-        profile.id:
-          type: string
-        profile.user_id:
-          type: string
-        profile.source:
-          type: string
-        profile.type:
-          type: string
-        profile.name:
-          type: string
-        profile.attributes:
-          type: object
-        profile.identifiers:
-          type: array
-        profile.created_at:
-          type: string
-        profile.updated_at:
-          type: string
-    PostApiV2UserProfilesEventsRequest:
-      type: object
-      properties:
-        profile:
-          type: object
-          description: Profile that associates the person with a Zendesk user
-        event:
-          type: object
-          description: Event data to be recorded
-      required:
-      - profile
-      - event
     GetApiV2UserProfilesEventsResponse:
       type: object
       properties:
@@ -335,6 +272,69 @@ components:
             properties:
               next:
                 type: string
+    PostApiV2UserProfilesEventsResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Indicates the event was received
+    PatchApiV2UserProfilesRequest:
+      type: object
+      properties:
+        profile:
+          type: object
+          description: Partial profile object with fields to be updated.
+        profile.identifiers:
+          type: array
+          description: Array of identifier objects to add.
+        profile.identifiers[].type:
+          type: string
+          description: Identifier type, e.g. "office_phone".
+        profile.identifiers[].value:
+          type: string
+          description: Identifier value.
+      required:
+      - profile
+      - profile.identifiers
+      - profile.identifiers[].type
+      - profile.identifiers[].value
+    PutApiV2UserProfilesResponse:
+      type: object
+      properties:
+        profile.id:
+          type: string
+          description: Unique identifier of the profile.
+        profile.user_id:
+          type: string
+          description: Zendesk user id associated with the profile.
+        profile.source:
+          type: string
+        profile.type:
+          type: string
+        profile.name:
+          type: string
+        profile.attributes:
+          type: object
+        profile.identifiers:
+          type: array
+        profile.created_at:
+          type: string
+          description: Timestamp of creation.
+        profile.updated_at:
+          type: string
+          description: Timestamp of last update.
+    PostApiV2UserProfilesEventsRequest:
+      type: object
+      properties:
+        profile:
+          type: object
+          description: Profile that associates the person with a Zendesk user
+        event:
+          type: object
+          description: Event data to be recorded
+      required:
+      - profile
+      - event
   securitySchemes:
     bearer:
       type: http

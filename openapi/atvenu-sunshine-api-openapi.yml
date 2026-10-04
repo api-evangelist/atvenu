@@ -169,33 +169,6 @@ paths:
         collapsed_from: 2 example path(s) differing only at sunshineId
 components:
   schemas:
-    PostApiSunshineSunshineidTypesResponse:
-      type: object
-      properties:
-        data.key:
-          type: string
-          description: The key of the created object type.
-        data.schema:
-          type: object
-          description: The schema of the created object type.
-        data.created_at:
-          type: string
-          description: Timestamp when the object type was created.
-        data.updated_at:
-          type: string
-          description: Timestamp when the object type was last updated.
-    PostApiSunshineSunshineidTypesRequest:
-      type: object
-      properties:
-        data.key:
-          type: string
-          description: The unique key that identifies the object type.
-        data.schema:
-          type: object
-          description: The JSON schema that defines the object's properties.
-      required:
-      - data.key
-      - data.schema
     PostApiSunshineSunshineidRecordsResponse:
       type: object
       properties:
@@ -214,36 +187,21 @@ components:
         data.created_at:
           type: string
           description: Timestamp when the relationship record was created.
-    GetApiSunshineObjectsRecordsResourceidRelationshipsRelations:
+    PostApiSunshineSunshineidTypesResponse:
       type: object
       properties:
-        data:
-          type: array
-          description: Array of relationship records.
-        data[].id:
+        data.key:
           type: string
-          description: ID of the relationship record.
-        data[].target:
+          description: The key of the created object type.
+        data.schema:
+          type: object
+          description: The schema of the created object type.
+        data.created_at:
           type: string
-          description: Target object identifier.
-        data[].ref:
+          description: Timestamp when the object type was created.
+        data.updated_at:
           type: string
-          description: Reference URL to the target object.
-        links.previous:
-          type: string
-          description: Link to previous page of results (if any).
-        links.next:
-          type: string
-          description: Link to next page of results (if any).
-    PostApiSunshineObjectsObjectidResponse:
-      type: object
-      properties:
-        data.type:
-          type: string
-          description: The object type of the created record.
-        data.id:
-          type: string
-          description: The internal Zendesk record ID for the created object.
+          description: Timestamp when the object type was last updated.
     PostApiSunshineObjectsObjectidRequest:
       type: object
       properties:
@@ -272,6 +230,48 @@ components:
       - data.relationship_type
       - data.source
       - data.target
+    GetApiSunshineObjectsRecordsResourceidRelationshipsRelations:
+      type: object
+      properties:
+        data:
+          type: array
+          description: Array of relationship records.
+        data[].id:
+          type: string
+          description: ID of the relationship record.
+        data[].target:
+          type: string
+          description: Target object identifier.
+        data[].ref:
+          type: string
+          description: Reference URL to the target object.
+        links.previous:
+          type: string
+          description: Link to previous page of results (if any).
+        links.next:
+          type: string
+          description: Link to next page of results (if any).
+    PostApiSunshineSunshineidTypesRequest:
+      type: object
+      properties:
+        data.key:
+          type: string
+          description: The unique key that identifies the object type.
+        data.schema:
+          type: object
+          description: The JSON schema that defines the object's properties.
+      required:
+      - data.key
+      - data.schema
+    PostApiSunshineObjectsObjectidResponse:
+      type: object
+      properties:
+        data.type:
+          type: string
+          description: The object type of the created record.
+        data.id:
+          type: string
+          description: The internal Zendesk record ID for the created object.
   securitySchemes:
     bearer:
       type: http
