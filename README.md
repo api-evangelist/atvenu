@@ -64,5 +64,128 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-atVenu is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+atVenu provides an all‑in‑one payment and commerce platform for live events, enabling venues, festivals, artists, and pop‑up experiences to sell merchandise, food, beverage, tickets and services through a unified POS system. The solution supports mobile ordering, promotions, inventory management, and integrates with existing ticketing and CRM tools, aiming to streamline revenue streams for transient event operators.
+
+**Areas:** Company · Payments · Live Events · Commerce · Point-of-Sale
+
+## atVenu on APIs.io
+
+Everything profiled for atVenu is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/atvenu/](https://apis.io/providers/atvenu/)** — or go straight to one of the APIs or properties below.
+
+### APIs (15)
+
+- [atVenu AtVenu API](https://apis.io/apis/atvenu/atvenu-atvenu-api-api/) — The AtVenu API API from atVenu — 2 operation(s) for atvenu api.
+- [atVenu Download API](https://apis.io/apis/atvenu/atvenu-download-api/) — The Download API from atVenu — 2 operation(s) for download.
+- [atVenu Downloads API](https://apis.io/apis/atvenu/atvenu-downloads-api/) — The Downloads API from atVenu — 1 operation(s) for downloads.
+- [atVenu Help Center API](https://apis.io/apis/atvenu/atvenu-help-center-api/) — The Help Center API from atVenu — 1 operation(s) for help center.
+- [atVenu Incidents API](https://apis.io/apis/atvenu/atvenu-incidents-api/) — The Incidents API from atVenu — 1 operation(s) for incidents.
+- [atVenu Incremental API](https://apis.io/apis/atvenu/atvenu-incremental-api/) — The Incremental API from atVenu — 2 operation(s) for incremental.
+- [atVenu Register API](https://apis.io/apis/atvenu/atvenu-register-api/) — The Register API from atVenu — 1 operation(s) for register.
+- [atVenu Services API](https://apis.io/apis/atvenu/atvenu-services-api/) — The Services API from atVenu — 11 operation(s) for services.
+- [atVenu Sunshine API](https://apis.io/apis/atvenu/atvenu-sunshine-api/) — The Sunshine API from atVenu — 4 operation(s) for sunshine.
+- [atVenu Tickets API](https://apis.io/apis/atvenu/atvenu-tickets-api/) — The Tickets API from atVenu — 1 operation(s) for tickets.
+- [atVenu User Profiles API](https://apis.io/apis/atvenu/atvenu-user-profiles-api/) — The User Profiles API from atVenu — 3 operation(s) for user profiles.
+- [atVenu Users API](https://apis.io/apis/atvenu/atvenu-users-api/) — The Users API from atVenu — 3 operation(s) for users.
+- [atVenu Webhooks API](https://apis.io/apis/atvenu/atvenu-webhooks-api/) — The Webhooks API from atVenu — 1 operation(s) for webhooks.
+- [atVenu Webstore API](https://apis.io/apis/atvenu/atvenu-webstore-api/) — The Webstore API from atVenu — 1 operation(s) for webstore.
+- [atVenu Graph QL API](https://apis.io/apis/atvenu/atvenu-graph-ql-api/) — The Graph QL API from atVenu — 1 operation(s) for graph ql.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [GetApiServicesZisRegistryIntegrationBundlesUuidResponse](https://apis.io/schemas/atvenu/atvenu-get-api-services-zis-registry-integration-bundles-uuid-response/)
+- [GetApiSunshineObjectsRecordsResourceidRelationshipsRelations](https://apis.io/schemas/atvenu/atvenu-get-api-sunshine-objects-records-resourceid-relationships-relations/)
+- [GetApiV2IncrementalItemsJsonResponse](https://apis.io/schemas/atvenu/atvenu-get-api-v2-incremental-items-json-response/)
+- [GetApiV2UserProfilesEventsResponse](https://apis.io/schemas/atvenu/atvenu-get-api-v2-user-profiles-events-response/)
+- [PutApiV2UserProfilesRequest](https://apis.io/schemas/atvenu/atvenu-put-api-v2-user-profiles-request/)
+- [PutApiV2UserProfilesResponse](https://apis.io/schemas/atvenu/atvenu-put-api-v2-user-profiles-response/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Atvenu Context](https://apis.io/jsonld/atvenu/atvenu-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [atVenu API Rules](https://apis.io/rules/atvenu/atvenu-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Atvenu Authentication](https://apis.io/security/atvenu/atvenu-authentication/)
+- [Atvenu Domain Security](https://apis.io/security/atvenu/atvenu-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.atvenu.com/)
+- [Documentation](https://developer.zendesk.com/)
+- [Getting started](https://www.atvenu.com/sign-up)
+- [Support](https://atvenu.zendesk.com/hc/en-us)
+- [Blog](https://www.atvenu.com/blog)
+- [Terms of service](https://www.atvenu.com/terms-of-service)
+- [Privacy policy](https://www.atvenu.com/privacy-policy)
+- [GitHub](https://github.com/atvenu)
+
+## API Evangelist rating
+
+**Kin Score 30.6** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.4 |
+| Contract quality | 25.8 |
+| Contract governance | 35.6 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 40.5 |
+| Access clarity | 21.1 |
+
+**Agent readiness 18.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | partial |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 22.3** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/atvenu/](https://apis.io/providers/atvenu/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for atVenu: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/atvenu/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
